@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f9a825</color>
+    <color name="colorPrimaryDark">#f9a825</color>
+    <color name="colorAccent">#ffad42</color>
+    <color name="textColorPrimary">#442C2E</color>
+    <color name="toolbarIconColor">@color/textColorPrimary</color>
+    <color name="loginPageBackgroundColor">#FFFFFF</color>
+    <color name="productGridBackgroundColor">#FFFBFA</color>
+    <color name="textInputOutlineColor">#FBB8AC</color>
+    <color name="facebookPrimaryColor">#0091ea</color>
+    <color name="facebookLightColor">#64c1ff</color>
+    <color name="facebookDarkColor">#0064b7</color>
+    <color name="microsoftPrimaryColor">#00acc1</color>
+    <color name="colorLightGreen">#f1f8e9</color>
+    <color name="colorBorder">#b6b8c3</color>
+    <color name="colorText">#000000</color>
+
+</resources>

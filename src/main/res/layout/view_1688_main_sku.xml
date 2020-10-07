@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.skailab.nikabuy.models.Sku1688" />
+    </data>
+    <com.google.android.material.card.MaterialCardView
+        app:strokeWidth="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:strokeColor="@color/colorBorder"
+        app:cardElevation="1dp">
+        <LinearLayout
+            android:id="@+id/productContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/icon_image"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:imageUrl="@{viewModel.miniImageUrl}"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"/>
+            <TextView
+                android:id="@+id/textViewProductName"
+                android:layout_width="100dp"
+                android:lines="3"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.skuText}" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

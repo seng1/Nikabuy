@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.skailab.nikabuy.viewModels.CartViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/rcvProductItems"
+            android:layout_above="@+id/footer"
+
+            android:visibility="@{viewModel.hasCart? View.VISIBLE:View.GONE}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:visibility="@{!viewModel.hasCart? View.VISIBLE:View.GONE}"
+            android:textColor="@color/colorAccent"
+            android:text="@string/you_don_have_cart" />
+        <LinearLayout
+            android:id="@+id/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/select_all"
+                android:id="@+id/chkSelectAll"
+                android:checked="@{viewModel.selectAll}"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:id="@+id/txtDetail"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="5dp"
+               app:Price="@{viewModel.total}"/>
+            <Button
+                android:id="@+id/btSubmit"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textAllCaps="false"
+                android:layout_height="wrap_content"
+                android:text="@string/submit" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</layout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:compat="http://schemas.android.com/apk/res-auto"
+    >
+    <item android:id="@+id/textSearch"
+        android:title="@string/text_search"
+        android:icon="@drawable/baseline_search_24"
+        compat:showAsAction="ifRoom"/>
+    <item android:id="@+id/audio"
+        android:title="@string/audio_search"
+        android:visible="false"
+        android:icon="@drawable/baseline_settings_voice_24"
+        compat:showAsAction="ifRoom"/>
+    <item android:id="@+id/image"
+        android:title="@string/image_search"
+        android:icon="@drawable/baseline_camera_alt_24"
+        compat:showAsAction="ifRoom"/>
+</menu>

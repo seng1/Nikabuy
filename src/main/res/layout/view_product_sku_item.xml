@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.skailab.nikabuy.viewModels.ProductSkuItemViewModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        card_view:cardCornerRadius="1dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardElevation="1dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/icon_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:imageUrl="@{viewModel.product.smallImageUrl}"
+                android:layout_alignParentLeft="true"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/app_name"/>
+            <TextView
+                android:id="@+id/title_header"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/icon_image"
+                android:layout_alignBaseline="@+id/icon_image"
+                android:padding="18dp"
+                android:textSize="12sp"
+                android:text="@{viewModel.product.skuText}"/>
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/title_header"
+                android:layout_alignBaseline="@+id/title_header"
+                android:padding="18dp"
+                android:textSize="12sp"
+                android:text="@{viewModel.price}"/>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/price"
+                android:gravity="right"
+                android:layout_marginRight="5dp"
+                android:hint="@string/qty"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/quantity"
+                    android:inputType="number"
+                    app:bindInt="@{viewModel.product.quantity}"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

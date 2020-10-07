@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.skailab.nikabuy.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_cardFragment2"
+            app:destination="@id/cardFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_audioFragment"
+            app:destination="@id/audioFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_textFragment"
+            app:destination="@id/textFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_product1688Fragment"
+            app:destination="@+id/product1688Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_product1688Fragment2"
+            app:destination="@id/product1688Fragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_productTaobaoFragment"
+            app:destination="@id/productTaobaoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_updateSaleManFragment"
+            app:destination="@id/updateSaleManFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardFragment"
+        android:name="com.skailab.nikabuy.card.CardFragment"
+        android:label="@string/card_text"
+        tools:layout="@layout/fragment_card" >
+        <action
+            android:id="@+id/action_cardFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_cardFragment_to_editCartFragment"
+            app:destination="@id/editCartFragment" />
+        <action
+            android:id="@+id/action_cardFragment_to_newOrderFragment"
+            app:destination="@id/newOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="com.skailab.nikabuy.order.OrderFragment"
+        android:label="@string/orders"
+        tools:layout="@layout/fragment_order" >
+        <action
+            android:id="@+id/action_orderFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.skailab.nikabuy.account.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_accountFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_accountFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.skailab.nikabuy.account.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_forgetPasswordFragment"
+            app:destination="@id/forgetPasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.skailab.nikabuy.account.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.skailab.nikabuy.image.ImageFragment"
+        android:label="@string/image_search"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_imageFragment_to_productTaobaoFragment"
+            app:destination="@id/productTaobaoFragment" />
+        <action
+            android:id="@+id/action_imageFragment_to_product1688Fragment"
+            app:destination="@id/product1688Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="com.skailab.nikabuy.audio.AudioFragment"
+        android:label="@string/audio_search"
+        tools:layout="@layout/fragment_audio" >
+        <action
+            android:id="@+id/action_audioFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_audioFragment_to_product1688Fragment"
+            app:destination="@id/product1688Fragment" />
+        <action
+            android:id="@+id/action_audioFragment_self"
+            app:destination="@id/audioFragment" />
+        <action
+            android:id="@+id/action_audioFragment_to_productTaobaoFragment"
+            app:destination="@id/productTaobaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/textFragment"
+        android:name="com.skailab.nikabuy.text.TextFragment"
+        android:label="@string/text_search"
+        tools:layout="@layout/fragment_text" >
+        <action
+            android:id="@+id/action_textFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <action
+            android:id="@+id/action_textFragment_to_product1688Fragment"
+            app:destination="@id/product1688Fragment" />
+        <action
+            android:id="@+id/action_textFragment_to_productTaobaoFragment"
+            app:destination="@id/productTaobaoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.skailab.nikabuy.productdetail.ProductDetailFragment"
+        android:label="@string/good_detail" >
+        <argument
+            android:name="ProductDetail"
+            app:argType="com.skailab.nikabuy.models.ProductDetail" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_productDescriptionFragment"
+            app:destination="@id/productDescriptionFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_productScoreFragment"
+            app:destination="@id/productScoreFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_recommentFragment"
+            app:destination="@id/recommentFragment" />
+        <action
+            android:id="@+id/action_productDetailFragment_to_addCartFragment"
+            app:destination="@id/addCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDescriptionFragment"
+        android:name="com.skailab.nikabuy.productdetail.ProductDescriptionFragment"
+        android:label="@string/good_detail" >
+        <argument
+            android:name="ProductDetail"
+            app:argType="com.skailab.nikabuy.models.ProductDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/productScoreFragment"
+        android:name="com.skailab.nikabuy.productdetail.ProductScoreFragment"
+        android:label="@string/good_score" >
+        <argument
+            android:name="ProductDetail"
+            app:argType="com.skailab.nikabuy.models.ProductDetail" />
+        <action
+            android:id="@+id/action_productScoreFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recommentFragment"
+        android:name="com.skailab.nikabuy.productdetail.RecommendFragment"
+        android:label="@string/recommend_product"
+        tools:layout="@layout/fragment_recommend" >
+        <action
+            android:id="@+id/action_recommentFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+        <argument
+            android:name="ProductDetail"
+            app:argType="com.skailab.nikabuy.models.ProductDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCartFragment"
+        android:name="com.skailab.nikabuy.productdetail.AddCartFragment"
+        android:label="@string/card_text" >
+        <argument
+            android:name="ProductDetail"
+            app:argType="com.skailab.nikabuy.models.ProductDetail" />
+        <action
+            android:id="@+id/action_addCartFragment_to_newOrderFragment"
+            app:destination="@id/newOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCartFragment"
+        android:name="com.skailab.nikabuy.card.EditCartFragment"
+        android:label="@string/card_text" >
+        <argument
+            android:name="Cart"
+            app:argType="com.skailab.nikabuy.models.Cart" />
+    </fragment>
+    <fragment
+        android:id="@+id/newOrderFragment"
+        android:name="com.skailab.nikabuy.order.NewOrderFragment"
+        android:label="@string/new_purchase_order" >
+        <action
+            android:id="@+id/action_newOrderFragment_to_newContactFragment"
+            app:destination="@id/newContactFragment" />
+        <argument
+            android:name="orderSubmit"
+            app:argType="com.skailab.nikabuy.models.OrderSubmit" />
+    </fragment>
+    <fragment
+        android:id="@+id/newContactFragment"
+        android:name="com.skailab.nikabuy.contact.NewContactFragment"
+        android:label="@string/new_contact"
+        tools:layout="@layout/fragment_new_contact" />
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="com.skailab.nikabuy.order.OrderDetailFragment"
+        android:label="Order Detail"
+        tools:layout="@layout/fragment_order_detail" >
+        <argument
+            android:name="OrderId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountDashboardFragment"
+        android:name="com.skailab.nikabuy.account.AccountDashboardFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account_dashboard" >
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_accountFragment"
+            app:destination="@id/accountFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_buyerInfoFragment"
+            app:destination="@id/buyerInfoFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_depositFragment"
+            app:destination="@id/depositFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_paymentPasswordFragment"
+            app:destination="@id/paymentPasswordFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_boxFragment"
+            app:destination="@id/boxFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_accountLinkFragment"
+            app:destination="@id/accountLinkFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_languageFragment"
+            app:destination="@id/languageFragment" />
+        <action
+            android:id="@+id/action_accountDashboardFragment_to_updateSaleManFragment"
+            app:destination="@id/updateSaleManFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyerInfoFragment"
+        android:name="com.skailab.nikabuy.account.BuyerInfoFragment"
+        android:label="@string/buyer"
+        tools:layout="@layout/fragment_buyer_info" />
+    <fragment
+        android:id="@+id/depositFragment"
+        android:name="com.skailab.nikabuy.deposit.DepositFragment"
+        android:label="@string/deposit"
+        tools:layout="@layout/fragment_deposit" >
+        <action
+            android:id="@+id/action_depositFragment_to_newDepositFragment"
+            app:destination="@id/newDepositFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newDepositFragment"
+        android:name="com.skailab.nikabuy.deposit.NewDepositFragment"
+        android:label="@string/new_deposit"
+        tools:layout="@layout/fragment_new_deposit" />
+    <fragment
+        android:id="@+id/paymentPasswordFragment"
+        android:name="com.skailab.nikabuy.payment.PaymentPasswordFragment"
+        android:label="@string/payment_password"
+        tools:layout="@layout/fragment_payment_password" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.skailab.nikabuy.contact.ContactFragment"
+        android:label="@string/contact"
+        tools:layout="@layout/fragment_contact" >
+        <action
+            android:id="@+id/action_contactFragment_to_newContactFragment"
+            app:destination="@id/newContactFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boxFragment"
+        android:name="com.skailab.nikabuy.box.BoxFragment"
+        android:label="@string/my_box"
+        tools:layout="@layout/fragment_box" />
+    <fragment
+        android:id="@+id/forgetPasswordFragment"
+        android:name="com.skailab.nikabuy.account.ForgetPasswordFragment"
+        android:label="@string/forget_password"
+        tools:layout="@layout/fragment_forget_password" />
+    <fragment
+        android:id="@+id/accountLinkFragment"
+        android:name="com.skailab.nikabuy.account.AccountLinkFragment"
+        android:label="@string/account_link"
+        tools:layout="@layout/fragment_account_link" >
+        <action
+            android:id="@+id/action_accountLinkFragment_to_accountMobileLinkFragment"
+            app:destination="@id/accountMobileLinkFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountMobileLinkFragment"
+        android:name="com.skailab.nikabuy.account.AccountMobileLinkFragment"
+        android:label="@string/mobile_link"
+        tools:layout="@layout/fragment_account_mobile_link" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.skailab.nikabuy.account.LanguageFragment"
+        android:label="@string/language"
+        tools:layout="@layout/fragment_language" />
+    <fragment
+        android:id="@+id/product1688Fragment"
+        android:name="com.skailab.nikabuy.product1688.product1688Fragment"
+        android:label="@string/card_text"
+        tools:layout="@layout/fragment_product1688" >
+        <argument
+            android:name="product1688Detail"
+            app:argType="com.skailab.nikabuy.models.Product1688" />
+        <action
+            android:id="@+id/action_product1688Fragment_to_product1688AddCartFragment"
+            app:destination="@id/product1688AddCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productTaobaoFragment"
+        android:name="com.skailab.nikabuy.productTaobao.productTaobaoFragment"
+        android:label="@string/card_text"
+        tools:layout="@layout/fragment_product_taobao" >
+        <argument
+            android:name="productTaobao"
+            app:argType="com.skailab.nikabuy.models.ProductTaobao" />
+        <action
+            android:id="@+id/action_productTaobaoFragment_to_producttaobaoAddCartFragment"
+            app:destination="@id/producttaobaoAddCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/producttaobaoAddCartFragment"
+        android:name="com.skailab.nikabuy.productTaobao.productTaobaoAddCartFragment"
+        android:label="@string/card_text"
+        tools:layout="@layout/fragment_producttaobao_add_cart" >
+        <argument
+            android:name="productTaobao"
+            app:argType="com.skailab.nikabuy.models.ProductTaobao" />
+        <action
+            android:id="@+id/action_producttaobaoAddCartFragment_to_newOrderFragment"
+            app:destination="@id/newOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/product1688AddCartFragment"
+        android:name="com.skailab.nikabuy.product1688.product1688AddCartFragment"
+        android:label="@string/card_text"
+        tools:layout="@layout/fragment_product1688_add_cart" >
+        <argument
+            android:name="product1688"
+            app:argType="com.skailab.nikabuy.models.Product1688" />
+        <action
+            android:id="@+id/action_product1688AddCartFragment_to_newOrderFragment"
+            app:destination="@id/newOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSaleManFragment"
+        android:name="com.skailab.nikabuy.saleMen.UpdateSaleManFragment"
+        android:label="@string/saleman"
+        tools:layout="@layout/fragment_update_sale_man" />
+</navigation>

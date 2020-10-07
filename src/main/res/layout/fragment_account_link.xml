@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.skailab.nikabuy.viewModels.AccountLinkViewModel" />
+    </data>
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/bottom_margin_bottom"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnMobileLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/link_your_mobile"
+                android:textAllCaps="false"
+                android:visibility="@{viewModel.showMobileLinkButton? View.VISIBLE:View.GONE}"
+                style="@style/Widget.MaterialComponents.Button"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFacebookLink"
+                style="@style/facebookButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/facebook64"
+                android:textAllCaps="false"
+                android:visibility="@{viewModel.showFacebookLinkButton? View.VISIBLE:View.GONE}"
+                android:text="@string/link_your_facebook"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/rcvProductItems"
+            android:layout_above="@+id/footer"
+            app:accountLinkItemData="@{viewModel.users}"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            />
+    </LinearLayout>
+
+</layout>
