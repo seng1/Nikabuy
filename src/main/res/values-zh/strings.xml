@@ -41,7 +41,7 @@
     <string name="good_score">好成绩</string>
     <string name="recommend_product">推荐产品</string>
     <string name="new_purchase_order">新命令</string>
-    <string name="buyer">买方</string>
+    <string name="buyer">用户信息</string>
     <string name="new_deposit">新的存款</string>
     <string name="payment_password">支付密码</string>
     <string name="my_box">我的专栏</string>
@@ -152,8 +152,8 @@
     <string name="login_with_facebook">与Facebook登录</string>
     <string name="register_with_facebook">与Facebook注册</string>
     <string name="past_goods_url_or_key_phrase">past goods url or key phrase</string>
-    <string name="alibaba_1688">1688.com</string>
-    <string name="taobao">taobao.com,tmall.com</string>
+    <string name="alibaba_1688">1688</string>
+    <string name="taobao">Taobao-Tmall</string>
     <string name="text_search_require">Text search is require</string>
     <string name="search_product_not_found">Search product not found</string>
     <string name="take_photo">Take Photo</string>
@@ -190,4 +190,17 @@
     <string name="please_select_sale_man">请选择推销员</string>
     <string name="name_require">名称为必填项</string>
     <string name="share">分享</string>
+    <string name="click_below_image_to_upload">点击此处上传汇款证据</string>
+    <string name="source">资源</string>
+    <string name="minimum_quantity">最小用量</string>
+    <string name="please_choose">请选择：</string>
+    <string name="no_box_to_pay">没有付款箱</string>
+    <string name="total_box">总箱数</string>
+    <string name="total_amount">总金额</string>
+    <string name="create_payment_password">创建付款密码</string>
+    <string name="box_number">箱号</string>
+    <string name="passcode">密码</string>
+    <string name="forget_payment_password_please_contact_to">如果您忘记了付款密码，请联系我们的客户服务098333753</string>
+    <string name="no_purchase_order_to_pay">您没有要支付的采购订单</string>
+    <string name="rate">率</string>
 </resources>

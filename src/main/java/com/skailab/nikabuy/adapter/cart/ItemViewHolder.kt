@@ -19,14 +19,8 @@ class ItemViewHolder(val rootView: View) :
         rootView.txtDetail.text=cart.title
         rootView.txtSku.text=cart.skuText
         rootView.quantity.setText(cart.quantity.toString())
-        rootView.noMessageBtn.visibility=View.GONE
         rootView.messageBtn.visibility=View.GONE
-        if(cart.description==null || cart.description.isNullOrEmpty()){
-            rootView.noMessageBtn.visibility=View.VISIBLE
-        }
-        else{
-            rootView.messageBtn.visibility=View.VISIBLE
-        }
+        rootView.messageBtn.visibility=View.VISIBLE
         if(cart.isSelected!!){
             rootView.chkCheck.isChecked=true
         }

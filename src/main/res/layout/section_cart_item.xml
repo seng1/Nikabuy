@@ -49,6 +49,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:lines="1"
+                        android:gravity="center"
                         android:id="@+id/txtSku" />
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -81,45 +82,36 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/colorAccent"
+                            android:lines="1"
                             android:id="@+id/textViewPrice">
                         </TextView>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="right"
-                android:layout_gravity="right"
-                android:layout_marginBottom="3dp"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-                    android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit"
+                    android:textAllCaps="false"
                     android:id="@+id/messageBtn"
-                    android:background="@drawable/md_transparent"
-                    android:src="@drawable/icons_chat_message_sent" />
-                <ImageButton
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-                    android:id="@+id/noMessageBtn"
-                    android:layout_marginRight="5dp"
-                    android:background="@drawable/md_transparent"
-                    android:src="@drawable/icons_no_chat_message" />
-                <ImageButton
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    />
+                <Button
                     android:id="@+id/deleteBtn"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="center"
-
-                    android:background="@drawable/md_transparent"
-                    android:src="@drawable/icons_delete" />
-
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delete"
+                    android:textAllCaps="false"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    />
             </LinearLayout>
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

@@ -42,16 +42,16 @@
     <string name="good_score">Good Score</string>
     <string name="recommend_product">Recommend Product</string>
     <string name="new_purchase_order">New Order</string>
-    <string name="buyer">Buyer</string>
+    <string name="buyer">User Information</string>
     <string name="new_deposit">New Deposit</string>
     <string name="payment_password">Payment Password</string>
     <string name="my_box">My Box</string>
-    <string name="contact">Contact</string>
+    <string name="contact">My Contact</string>
     <string name="forget_password">Forget Password</string>
     <string name="account_link">Account Link</string>
     <string name="mobile_link">Mobile Link</string>
     <string name="new_contact">New Contact</string>
-    <string name="deposit">Deposit</string>
+    <string name="deposit">Account balance / Deposit</string>
     <string name="language">Language</string>
     <string name="signout">Signout</string>
     <string name="yuan_usd">Rate (USD - CNY): </string>
@@ -153,8 +153,8 @@
     <string name="login_with_facebook">Login with Facebook</string>
     <string name="register_with_facebook">Register with Facebook</string>
     <string name="past_goods_url_or_key_phrase">past goods url or key phrase</string>
-    <string name="alibaba_1688">1688.com</string>
-    <string name="taobao">taobao.com,tmall.com</string>
+    <string name="alibaba_1688">1688</string>
+    <string name="taobao">Taobao-Tmall</string>
     <string name="text_search_require">Text search is require</string>
     <string name="search_product_not_found">Search product not found</string>
     <string name="take_photo">Take Photo</string>
@@ -166,7 +166,7 @@
     <string name="stop_record">Stop Record</string>
     <string name="internet_problem">Internet connection problem</string>
     <string name="your_email">Your Email</string>
-    <string name="your_code">Your Code</string>
+    <string name="your_code">Your ID</string>
     <string name="name">Name</string>
     <string name="customer_level">Customer Level</string>
     <string name="search_by_audio_slow">Search by audio is a bit slow, we will show the result soon, Please wait...</string>
@@ -191,4 +191,17 @@
     <string name="please_select_sale_man">Please select saleman</string>
     <string name="name_require">Name is require</string>
     <string name="share">Share</string>
+    <string name="click_below_image_to_upload">Click below image to upload</string>
+    <string name="source">Source</string>
+    <string name="minimum_quantity">Minimum Quantity</string>
+    <string name="please_choose">Please choose:</string>
+    <string name="no_box_to_pay">No box to pay</string>
+    <string name="total_box">Total box</string>
+    <string name="total_amount">Total amount</string>
+    <string name="create_payment_password">Create payment password</string>
+    <string name="box_number">Box number</string>
+    <string name="passcode">Passcode</string>
+    <string name="forget_payment_password_please_contact_to">If you forget your payment password, please contact to our customer service 098 333 753</string>
+    <string name="no_purchase_order_to_pay">You don\'t have purchase order to pay</string>
+    <string name="rate">Rate</string>
 </resources>

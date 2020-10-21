@@ -7,7 +7,7 @@ import com.skailab.nikabuy.models.User
 data class UserApiResult(
     @Expose
     @SerializedName("user")
-    val user: User,
+    val user: User?,
     @Expose
     @SerializedName("isSucess")
     val isSucess: Boolean,

@@ -1,5 +1,6 @@
 package com.skailab.nikabuy.services
 
+import com.skailab.nikabuy.models.MulitpleOrderPayment
 import com.skailab.nikabuy.models.OrderSubmit
 import com.skailab.nikabuy.models.ProductCartParcelize
 import com.skailab.nikabuy.models.api.*
@@ -31,6 +32,8 @@ interface OrderService {
     fun  reOrderAsync(@Path("orderId") orderId:Int) : Deferred<ApiResult>
     @GET("order/Pay/{orderId}/{password}")
     fun  payAsync(@Path("orderId") orderId:Int,@Path("password") password:String) : Deferred<ApiResult>
+    @POST("order/PayAll")
+    fun  payAllAsync(@Body data: MulitpleOrderPayment) : Deferred<ApiResult>
 }
 object OrderServiceApi{
     val retrofitService:OrderService by lazy { retrofit.create(OrderService::class.java)}

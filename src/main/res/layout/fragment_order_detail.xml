@@ -29,8 +29,6 @@
                         android:layout_centerVertical="true"
                         android:layout_gravity="left"
                         android:text="@{viewModel.order.title}"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
                         />
 
                     <TextView
@@ -38,8 +36,6 @@
                         android:layout_height="wrap_content"
                         android:gravity="right"
                         android:layout_gravity="right"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
                         app:Price="@{viewModel.order.total}"
                         />
                 </LinearLayout>
@@ -69,8 +65,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_horizontal"
-                        android:textColor="@color/colorPrimary"
-                        android:textStyle="bold"
                         android:id="@+id/lblStatus"
                         android:text="@{viewModel.order.orderStatus.title}"
                         android:layout_centerVertical="true"

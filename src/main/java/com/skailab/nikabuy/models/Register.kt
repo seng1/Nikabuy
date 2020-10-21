@@ -8,4 +8,5 @@ class Register {
     var confirmVerificationCode:String=""
     var saleManId:Int?=null
     var name:String=""
+    var paymentPassword:String=""
 }

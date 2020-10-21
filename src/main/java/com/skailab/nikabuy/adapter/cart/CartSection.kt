@@ -88,9 +88,6 @@ class CartSection(private val shop: ShopCartForBindingList,
         itemHolder.rootView.messageBtn.setOnClickListener {
             onEditClick.onClick(cart)
         }
-        itemHolder.rootView.noMessageBtn.setOnClickListener {
-            onEditClick.onClick(cart)
-        }
         itemHolder.rootView.deleteBtn.setOnClickListener {
             onDeleteClick.onClick(cart)
         }

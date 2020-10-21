@@ -14,6 +14,7 @@ import com.google.android.material.chip.ChipDrawable
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.skailab.nikabuy.R
 import com.skailab.nikabuy.adapter.order.OrderSection
+import com.skailab.nikabuy.box.BoxPayAllFragment
 import com.skailab.nikabuy.databinding.FragmentOrderBinding
 import com.skailab.nikabuy.factory.OrderViewModelFactory
 import com.skailab.nikabuy.models.Order
@@ -62,6 +63,7 @@ class OrderFragment : Fragment() {
                         val chip = Chip(requireContext())
                         chip.text=it.name + "(" +it.total.toString()+")"
                         chip.id=it.id!!
+
                         val chipDrawable = ChipDrawable.createFromAttributes(
                             requireContext(),
                             null,
@@ -75,6 +77,7 @@ class OrderFragment : Fragment() {
                             sectionedAdapter.removeAllSections()
                             sectionedAdapter.notifyDataSetChanged()
                             binding.viewModel!!.setStatus(it.id,requireContext())
+
                         }
                         binding.chipGroup.addView(chip)
                     }
@@ -129,6 +132,15 @@ class OrderFragment : Fragment() {
                 else{
                     binding.viewModel!!.onGetMoreOrder()
                 }
+            }
+        }
+        binding.btnPayAll.setOnClickListener {
+            if(binding.viewModel!!.orders.value!!.count()==0){
+                binding.viewModel!!.showMadal(requireContext(),resources.getString(R.string.no_purchase_order_to_pay))
+            }
+            else{
+                val bottomSheet = OrderPayAllFragment(binding.viewModel!!.orders.value!!,sectionedAdapter)
+                bottomSheet.show(requireActivity().supportFragmentManager, "Payment")
             }
         }
         // Inflate the layout for this fragment

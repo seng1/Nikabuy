@@ -2,13 +2,18 @@ package com.skailab.nikabuy.deposit
 
 
 import android.app.Activity
+import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.app.DatePickerDialog.OnDateSetListener
 import android.app.TimePickerDialog
 import android.app.TimePickerDialog.OnTimeSetListener
+import android.content.DialogInterface
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.graphics.Bitmap
 import android.icu.util.Calendar
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.*
 import android.widget.RadioButton
 import androidx.fragment.app.Fragment
@@ -22,8 +27,8 @@ import com.skailab.nikabuy.factory.NewDepositViewModelFactory
 import com.skailab.nikabuy.models.BankAccount
 import com.skailab.nikabuy.room.UserDatabase
 import com.skailab.nikabuy.viewModels.NewDepositViewModel
+import java.io.ByteArrayOutputStream
 import java.io.IOException
-import kotlin.math.min
 import kotlin.requireNotNull as requireNotNull1
 
 
@@ -32,6 +37,9 @@ import kotlin.requireNotNull as requireNotNull1
  */
 class NewDepositFragment : Fragment() {
     private var binding:FragmentNewDepositBinding?=null
+    private val REQUEST_CAMERA = 0
+    private val SELECT_FILE = 1
+    private var userChoosenTask: String? = null
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -75,10 +83,25 @@ class NewDepositFragment : Fragment() {
             showDateDialog(binding!!)
         }
         binding!!.btnUploadImage.setOnClickListener {
-            Utility.checkPermission(requireContext())
-            val intent = Intent(Intent.ACTION_PICK)
-            intent.type = "image/*"
-            startActivityForResult(Intent.createChooser(intent, getString(R.string.select_image)), 1)
+
+            val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext())
+            builder.setTitle(resources.getString(R.string.please_choose))
+            val animals =
+                arrayOf(resources.getString(R.string.take_photo),resources.getString(R.string.browe_from_galery))
+            builder.setItems(animals,
+                { dialog, which ->
+
+                    if(which==0){
+                        userChoosenTask=resources.getString(R.string.take_photo)
+                        cameraIntent()
+                    }
+                    else if(which==1){
+                        userChoosenTask=resources.getString(R.string.browe_from_galery)
+                        galleryIntent()
+                    }
+                })
+            val dialog = builder.create()
+            dialog.show()
         }
         binding!!.btnConfirmRecharge.setOnClickListener({
             onSubmit(container!!)
@@ -86,16 +109,54 @@ class NewDepositFragment : Fragment() {
         // Inflate the layout for this fragment
         return binding!!.root
     }
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        when (requestCode) {
+            Utility.MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE -> if (grantResults.size > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                if (userChoosenTask == resources.getString(R.string.take_photo))
+                    cameraIntent()
+                else if (userChoosenTask == resources.getString(R.string.browe_from_galery))
+                    galleryIntent()
+            }
+        }
+    }
+    private fun cameraIntent() {
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, REQUEST_CAMERA)
+    }
+    private fun galleryIntent() {
+        val intent = Intent()
+        intent.type = "image/*"
+        intent.action = Intent.ACTION_GET_CONTENT//
+        startActivityForResult(Intent.createChooser(intent, getString(R.string.select_image)), SELECT_FILE)
+    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == Activity.RESULT_OK) {
-            onSelectFromGalleryResult(data)
+            if(requestCode != REQUEST_CAMERA){
+                onSelectFromGalleryResult(data)
+            }
+            else{
+                onCaptureImageResult(data!!)
+            }
+        }
+    }
+    private fun onCaptureImageResult(data: Intent) {
+        val thumbnail = data.extras!!.get("data") as Bitmap?
+        val bytes = ByteArrayOutputStream()
+        thumbnail!!.compress(Bitmap.CompressFormat.JPEG, 90, bytes)
+        try {
+            binding!!.btnUploadImage.setImageBitmap(thumbnail)
+            binding!!.viewModel!!.deposit.value!!.depositAccount!!.receiptImage=binding!!.viewModel!!.getBase64(thumbnail)
+            binding!!.viewModel!!.deposit.value!!.depositAccount!!.bankAccountId= binding!!.rdBankAccount.checkedRadioButtonId
+            binding!!.viewModel!!.uploadImage(binding!!,requireContext())
+        } catch (e: IOException) {
+            binding!!.viewModel!!.displayException(requireContext(),e)
         }
     }
     private fun onSelectFromGalleryResult(data: Intent?) {
         if (data != null) {
             try {
-                val bm=binding!!.viewModel!!.convertToBitmap(requireContext(),data!!.data!!)
+                val bm=binding!!.viewModel!!.convertToBitmap(requireContext(),data.data!!)
                 binding!!.btnUploadImage.setImageBitmap(bm)
                 binding!!.viewModel!!.deposit.value!!.depositAccount!!.receiptImage=binding!!.viewModel!!.getBase64(bm)
                 binding!!.viewModel!!.deposit.value!!.depositAccount!!.bankAccountId= binding!!.rdBankAccount.checkedRadioButtonId

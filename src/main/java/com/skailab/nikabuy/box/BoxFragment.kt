@@ -56,12 +56,24 @@ class BoxFragment : Fragment() {
         binding.rcvProductItems.addOnScrollListener(scrollListener)
         binding.chipUnpaid.setOnClickListener {
             binding.viewModel!!.setStatus(requireContext(),adapter,1)
+            binding.btnPayAll.visibility=View.VISIBLE
         }
         binding.chipAll.setOnClickListener {
             binding.viewModel!!.setStatus(requireContext(),adapter,0)
+            binding.btnPayAll.visibility=View.GONE
         }
         binding.chipPaid.setOnClickListener {
             binding.viewModel!!.setStatus(requireContext(),adapter,2)
+            binding.btnPayAll.visibility=View.GONE
+        }
+        binding.btnPayAll.setOnClickListener {
+            if(binding.viewModel!!.boxes.value!!.count()==0){
+                binding.viewModel!!.showMadal(requireContext(),resources.getString(R.string.no_box_to_pay))
+            }
+            else{
+                val bottomSheet = BoxPayAllFragment(binding.viewModel!!.boxes.value!!,adapter)
+                bottomSheet.show(requireActivity().supportFragmentManager, "Payment")
+            }
         }
         // Inflate the layout for this fragment
         return binding.root

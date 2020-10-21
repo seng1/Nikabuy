@@ -13,6 +13,7 @@ import com.skailab.nikabuy.LocaleHelper
 import com.skailab.nikabuy.R
 import com.skailab.nikabuy.Space
 import com.skailab.nikabuy.adapter.ProductAdapter
+import com.skailab.nikabuy.adapter.ProductRecommentAdapter
 import com.skailab.nikabuy.adapter.SliderAdapter
 import com.skailab.nikabuy.databinding.FragmentProduct1688Binding
 import com.skailab.nikabuy.databinding.FragmentProductTaobaoBinding
@@ -48,7 +49,7 @@ class product1688Fragment : Fragment() {
         itemId=binding.viewModel!!.product.value!!.itemId!!
         binding.webView.getSettings().setLoadWithOverviewMode(true)
         binding.webView.getSettings().setUseWideViewPort(true);
-        var adapter= ProductAdapter(ProductAdapter.OnClickListener {
+        var adapter= ProductRecommentAdapter(ProductRecommentAdapter.OnClickListener {
             binding.viewModel!!.getProductDetail(requireContext(),it.itemId)
         })
         binding.viewModel!!.product.observe(viewLifecycleOwner,androidx.lifecycle.Observer { product: Product1688? ->

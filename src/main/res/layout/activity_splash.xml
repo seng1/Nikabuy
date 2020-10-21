@@ -12,13 +12,12 @@
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
         android:gravity="center">
-        <TextView
+        <ImageView
+            android:layout_toRightOf="@+id/rndSelect"
+            android:id="@+id/img"
             android:layout_width="wrap_content"
+            android:src="@drawable/logo"
             android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textColor="#fff"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:adjustViewBounds="true" />
     </LinearLayout>
-
 </LinearLayout >

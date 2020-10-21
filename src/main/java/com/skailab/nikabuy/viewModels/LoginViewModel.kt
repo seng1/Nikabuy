@@ -25,7 +25,7 @@ class LoginViewModel( db: UserDao?) : BaseViewModel(db) {
                 }
                 else{
                     val user= User(1,
-                        result.user.phoneNumber!!,result.user.buyer!!.id,result.user.buyer!!.code!!,
+                        result.user!!.phoneNumber!!,result.user.buyer!!.id,result.user.buyer!!.code!!,
                         result.user.userName!!,result.user.id!!,productProvider,getDefaultLanguage())
                     withContext(Dispatchers.IO) {
                         database!!.insert(user)
@@ -48,8 +48,8 @@ class LoginViewModel( db: UserDao?) : BaseViewModel(db) {
                 }
                 else{
                     val user= User(1,
-                        result.user.phoneNumber!!,result.user.buyer!!.id,result.user.buyer!!.code!!,
-                        result.user.userName!!,result.user.id!!,productProvider,getDefaultLanguage())
+                        result.user!!.phoneNumber!!,result.user!!.buyer!!.id,result.user!!.buyer!!.code!!,
+                        result.user!!.userName!!,result.user!!.id!!,productProvider,getDefaultLanguage())
                     withContext(Dispatchers.IO) {
                         database!!.insert(user)
                     }

@@ -16,26 +16,22 @@
         android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/productContent"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RelativeLayout
+            <ImageView
+                android:id="@+id/mars_image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:id="@+id/mars_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="fitCenter"
-                    app:imageUrl="@{viewModel.imageUrl}"
-                    android:src="@drawable/no_image"
-                    tools:src="@tools:sample/backgrounds/scenic"/>
-
-            </RelativeLayout>
+                android:layout_height="120dp"
+                android:scaleType="fitCenter"
+                app:imageUrl="@{viewModel.imageUrl}"
+                android:src="@drawable/no_image"
+                android:layout_gravity="center_horizontal"
+                tools:src="@tools:sample/backgrounds/scenic"/>
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="1dp">
                 <LinearLayout
@@ -44,11 +40,14 @@
                     android:gravity="center_horizontal">
                     <TextView
                         android:id="@+id/textViewProductName"
-                        android:layout_width="200dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@{viewModel.title}"
-                        android:lines="3"
+                        android:lines="2"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
                         android:gravity="center"
+                        android:textSize="@dimen/text_size"
                         android:layout_gravity="center"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
                 </LinearLayout>
@@ -56,23 +55,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
                     >
                     <TextView
                         android:id="@+id/textViewProductPrice"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
                         android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
                         android:text="@{viewModel.discountPriceRangetext}"
                         android:textColor="@color/colorAccent" />
-                    <TextView
-                        android:id="@+id/textViewOrignalProductPrice"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="right"
-                        android:textSize="12dp"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                        app:strikeThrough="@{viewModel.orginalPriceRangetext}"
-                        android:textColor="@color/colorAccent" />
+
                 </LinearLayout>
             </LinearLayout>
 

@@ -47,6 +47,13 @@
                 android:text=""
                 />
         </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:text="@string/forget_payment_password_please_contact_to"
+            />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPay"
             android:textAllCaps="false"

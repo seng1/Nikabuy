@@ -3,23 +3,19 @@ package com.skailab.nikabuy.productTaobao
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Base64
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.skailab.nikabuy.LocaleHelper
 import com.skailab.nikabuy.R
 import com.skailab.nikabuy.Space
-import com.skailab.nikabuy.adapter.ProductAdapter
+import com.skailab.nikabuy.adapter.ProductRecommentAdapter
 import com.skailab.nikabuy.adapter.SliderAdapter
 import com.skailab.nikabuy.databinding.FragmentProductTaobaoBinding
 import com.skailab.nikabuy.factory.ProductTaobaoViewModelFactory
 import com.skailab.nikabuy.models.Product
 import com.skailab.nikabuy.models.ProductTaobao
-import com.skailab.nikabuy.productdetail.ProductDetailFragmentDirections
 import com.skailab.nikabuy.room.UserDatabase
 import com.skailab.nikabuy.viewModels.ProductTaobaoViewModel
 import com.smarteist.autoimageslider.IndicatorAnimations
@@ -45,7 +41,7 @@ class productTaobaoFragment : Fragment() {
         itemId=binding.viewModel!!.product.value!!.itemId!!
         binding.webView.getSettings().setLoadWithOverviewMode(true);
         binding.webView.getSettings().setUseWideViewPort(true);
-        var adapter= ProductAdapter(ProductAdapter.OnClickListener {
+        var adapter= ProductRecommentAdapter(ProductRecommentAdapter.OnClickListener {
             binding.viewModel!!.getProductDetail(requireContext(),it.itemId)
         })
 

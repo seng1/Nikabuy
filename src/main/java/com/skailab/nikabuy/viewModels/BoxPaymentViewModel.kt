@@ -23,7 +23,7 @@ class BoxPaymentViewModel( db: UserDao?) : BaseViewModel(db) {
         uiScope.launch {
             try {
                 showWaiting(context)
-                val result = BoxServiceApi.retrofitService.payAsync(_box.value!!.id!!,userEntity.value!!.buyerId!!,password).await()
+                val result = BoxServiceApi.retrofitService.payAsync(_box.value!!.id,userEntity.value!!.buyerId,password).await()
                 hideWaiting()
                 if(!result.isSucess){
                     showMadal(context,result.errorText)

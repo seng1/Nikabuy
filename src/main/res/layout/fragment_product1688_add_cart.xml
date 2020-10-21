@@ -49,20 +49,22 @@
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="100dp">
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="70dp"
                                 android:id="@+id/title"
                                 android:text="@={viewModel.product.title}"
-                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold"
+                                android:lines="2"
+                                android:gravity="center"
+
                                 />
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/colorAccent"
                                 android:id="@+id/price"
                                 android:text="@{viewModel.product.discountPriceRangetext}"
-                                android:textSize="12sp"
-                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textSize="@dimen/text_size"
                                 android:gravity="center_horizontal"
                                 android:layout_alignParentRight="true"
                                 android:layout_below="@+id/title"
@@ -76,17 +78,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:layout_gravity="center"
-                    android:gravity="center">
+                    android:gravity="left">
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Minimum Quantity:"
+                        android:text="@string/minimum_quantity"
+                        android:textSize="@dimen/text_size"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=": "
+                        android:textSize="@dimen/text_size"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="1"
                         android:layout_marginLeft="5dp"
+                        android:textSize="@dimen/text_size"
                         android:id="@+id/textViewMinimumQty"
                         />
                 </LinearLayout>
@@ -101,17 +111,20 @@
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:text="@string/price"
+                        android:textSize="@dimen/text_size"
                         />
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:text=""
                         android:id="@+id/priceRange1"
+                        android:textSize="@dimen/text_size"
                         />
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text=""
+                        android:textSize="@dimen/text_size"
                         android:id="@+id/priceRange2"
                         />
                     <TextView
@@ -119,6 +132,7 @@
                         android:layout_height="wrap_content"
                         android:text=""
                         android:id="@+id/priceRange3"
+                        android:textSize="@dimen/text_size"
                         />
                 </LinearLayout>
                 <LinearLayout
@@ -132,18 +146,21 @@
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:text="@string/baches"
+                        android:textSize="@dimen/text_size"
                         />
                     <TextView
                         android:layout_width="70dp"
                         android:layout_height="wrap_content"
                         android:text=""
                         android:id="@+id/priceRangeValue1"
+                        android:textSize="@dimen/text_size"
                         />
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
                         android:text=""
                         android:id="@+id/priceRangeValue2"
+                        android:textSize="@dimen/text_size"
                         />
                     <TextView
                         android:layout_width="70dp"
@@ -160,16 +177,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="@dimen/text_size"
                         android:text="@string/remark"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
+                        android:textSize="@dimen/text_size"
                         android:text="@string/addCartRemark1"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
                         android:layout_alignParentRight="true"
                         android:text="@string/addCartRemark2"/>
                 </LinearLayout>
@@ -205,6 +224,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
+                        android:textSize="@dimen/text_size"
                         android:layout_marginLeft="10dp"
                         android:id="@+id/textViewStock"
                         android:text=""/>
@@ -214,12 +234,14 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:id="@+id/tvStockText"
+                        android:textSize="@dimen/text_size"
                         android:text="@string/stock"/>
                 </LinearLayout>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/tvMainSkuText"
+                    android:textSize="@dimen/text_size"
                     android:text=""/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"

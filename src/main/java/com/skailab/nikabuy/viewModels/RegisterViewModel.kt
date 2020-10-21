@@ -1,6 +1,8 @@
 package com.skailab.nikabuy.viewModels
 
+import android.content.ContentValues.TAG
 import android.content.Context
+import android.util.Log
 import android.view.ViewGroup
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -37,6 +39,7 @@ class RegisterViewModel(var db: UserDao?) : BaseViewModel(db) {
                 else{
                     _showRegisterPanel.value=false
                     _register.value!!.verificationCode=result.verificationCode.toString()
+                    Log.v(TAG, "Payment SMS code=" + _register.value!!.verificationCode)
                 }
             } catch (e: Exception) {
                 hideWaiting()
@@ -72,7 +75,7 @@ class RegisterViewModel(var db: UserDao?) : BaseViewModel(db) {
                 }
                 else {
                     val user= User(1,
-                        result.user.phoneNumber!!,result.user.buyer!!.id,result.user.buyer!!.code!!,
+                        result.user!!.phoneNumber!!,result.user.buyer!!.id,result.user.buyer!!.code!!,
                         result.user.userName!!,result.user.id!!,productProvider,getDefaultLanguage())
                     withContext(Dispatchers.IO) {
                         database!!.insert(user)
@@ -97,8 +100,8 @@ class RegisterViewModel(var db: UserDao?) : BaseViewModel(db) {
                 }
                 else{
                     val user= User(1,
-                        result.user.phoneNumber!!,result.user.buyer!!.id,result.user.buyer!!.code!!,
-                        result.user.userName!!,result.user.id!!,productProvider,getDefaultLanguage())
+                        result.user!!.phoneNumber!!,result.user!!.buyer!!.id,result.user!!.buyer!!.code!!,
+                        result.user!!.userName!!,result.user!!.id!!,productProvider,getDefaultLanguage())
                     withContext(Dispatchers.IO) {
                         database!!.insert(user)
                     }

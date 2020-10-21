@@ -14,8 +14,6 @@
             android:layout_centerVertical="true"
             android:layout_gravity="left"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
             />
 
         <TextView
@@ -36,8 +34,6 @@
             android:layout_centerVertical="true"
             android:layout_gravity="left"
             android:text=""
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
             />
         <TextView
             android:layout_alignStart="@+id/txtTitle"
@@ -75,8 +71,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimary"
-            android:textStyle="bold"
             android:layout_centerVertical="true"
             />
     </LinearLayout>

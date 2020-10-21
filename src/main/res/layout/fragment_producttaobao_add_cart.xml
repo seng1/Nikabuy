@@ -53,7 +53,8 @@
                                 android:layout_height="70dp"
                                 android:id="@+id/title"
                                 android:text="@={viewModel.product.title}"
-                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textSize="@dimen/text_size"
+                                android:textStyle="bold"
                                 />
                             <TextView
                                 android:layout_width="match_parent"
@@ -61,8 +62,7 @@
                                 android:textColor="@color/colorAccent"
                                 android:id="@+id/price"
                                 android:text="@{viewModel.product.discountPriceRangetext}"
-                                android:textSize="12sp"
-                                android:textAppearance="?attr/textAppearanceBody2"
+                                android:textSize="@dimen/text_size"
                                 android:gravity="center_horizontal"
                                 android:layout_alignParentRight="true"
                                 android:layout_below="@+id/title"
@@ -78,16 +78,18 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        android:textSize="@dimen/text_size"
                         android:text="@string/remark"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
                         android:layout_alignParentRight="true"
                         android:text="@string/addCartRemark1"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
                         android:layout_alignParentRight="true"
                         android:text="@string/addCartRemark2"/>
                 </LinearLayout>
@@ -95,6 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/lnSku"
+                    android:textSize="@dimen/text_size"
                     android:orientation="vertical">
 
                 </LinearLayout>
@@ -145,12 +148,14 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_marginLeft="10dp"
+                        android:textSize="@dimen/text_size"
                         android:id="@+id/textViewStock"
                         android:text=""/>
                     <TextView
                         android:layout_marginLeft="2dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size"
                         android:layout_alignParentRight="true"
                         android:id="@+id/tvStockText"
                         android:text="@string/stock"/>
@@ -172,6 +177,7 @@
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
+                    android:textSize="@dimen/text_size"
                     android:layout_height="wrap_content"
                     android:hint="@string/message_to_customer_service"
                     >

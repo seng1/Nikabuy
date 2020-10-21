@@ -11,7 +11,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 private const val BASE_URL = "https://nikabuy-m-v2.azurewebsites.net/api/"
-//private const val BASE_URL = "https://2e083c42c204.ngrok.io/api/"
+//private const val BASE_URL = "https://1e6e4435e78e.ngrok.io/api/"
 private val moshi = Moshi.Builder()
     .add(KotlinJsonAdapterFactory())
     .build()

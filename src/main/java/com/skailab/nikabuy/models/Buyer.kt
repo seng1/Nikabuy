@@ -15,5 +15,6 @@ class Buyer (
     var exchangeRate:Double=0.0,
     var  saleMan:SaleMan?=null,
     var id:Int=0,
-    var name:String?=""
+    var name:String?="",
+    var paymentPasswordCreated:Boolean?=null
     ): Parcelable

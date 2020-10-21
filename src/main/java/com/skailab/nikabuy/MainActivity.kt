@@ -48,7 +48,8 @@ class MainActivity : AppCompatActivity() {
                     R.id.productTaobaoFragment,
                     R.id.product1688Fragment,
                     R.id.producttaobaoAddCartFragment,
-                    R.id.product1688AddCartFragment
+                    R.id.product1688AddCartFragment,
+                    R.id.boxFragment
                     -> binding.bottomNavView.visibility = View.GONE
                     else -> binding.bottomNavView.visibility = View.VISIBLE
                 }

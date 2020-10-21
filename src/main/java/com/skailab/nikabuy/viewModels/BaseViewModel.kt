@@ -231,7 +231,7 @@ open class BaseViewModel(var database: UserDao?): ViewModel() {
         return  Resources.getSystem().displayMetrics.widthPixels
     }
     fun getSpaceCount():Int{
-        return  getScreenWidth()/250
+        return  2//getScreenWidth()/250
     }
     fun bindImage(imgView: ImageView, imgUrl: String?) {
         if(!imgUrl.isNullOrEmpty()){

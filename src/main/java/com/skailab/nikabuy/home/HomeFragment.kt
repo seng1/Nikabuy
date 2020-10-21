@@ -79,8 +79,13 @@ class HomeFragment : Fragment() {
             }
         })
         binding.viewModel!!.buyer.observe(viewLifecycleOwner,androidx.lifecycle.Observer { buyer:Buyer? ->
-            if(buyer!=null && buyer.saleManId==null){
-                container!!.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToUpdateSaleManFragment())
+            if(buyer!=null){
+                if(buyer.saleManId==null){
+                    container!!.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToUpdateSaleManFragment())
+                }
+                else if(buyer.paymentPasswordCreated!=null && buyer.paymentPasswordCreated==false){
+                    container!!.findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNewPaymentPasswordFragment())
+                }
             }
         })
         binding.viewModel!!.product1688.observe(binding.lifecycleOwner!!, Observer {

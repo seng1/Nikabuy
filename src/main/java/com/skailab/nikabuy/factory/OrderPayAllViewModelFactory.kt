@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.skailab.nikabuy.room.UserDao
 import com.skailab.nikabuy.viewModels.OrderPayAllViewModel
 
-class OrderListPaymentViewModelFactory(
+class OrderPayAllViewModelFactory(
     private val db: UserDao
 ) : ViewModelProvider.Factory {
     @Suppress("unchecked_cast")

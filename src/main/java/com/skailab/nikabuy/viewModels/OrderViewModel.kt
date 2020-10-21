@@ -29,6 +29,7 @@ class OrderViewModel( db: UserDao?) : BaseViewModel(db) {
     private val _orders = MutableLiveData<MutableList<Order>>()
     private val _newRequestedOrders = MutableLiveData<MutableList<Order>>()
     val newRequestedOrders: LiveData<MutableList<Order>> get() = _newRequestedOrders
+    val orders: LiveData<MutableList<Order>> get() = _orders
     private val _hasOrder = MutableLiveData<Boolean>()
     val hasOrder: LiveData<Boolean> get() = _hasOrder
     private val _showWaiting = MutableLiveData<Boolean>()
@@ -37,6 +38,8 @@ class OrderViewModel( db: UserDao?) : BaseViewModel(db) {
     var isBack:Boolean=false
     private val _showCenterWaiting = MutableLiveData<Boolean>()
     val showCenterWaiting: LiveData<Boolean> get() = _showCenterWaiting
+    private val _selectedStatusId = MutableLiveData<Int>()
+    val selectedStatusId: LiveData<Int> get() = _selectedStatusId
     init {
         _orderStatues.value= mutableListOf()
         _filter.statusId=0
@@ -46,6 +49,7 @@ class OrderViewModel( db: UserDao?) : BaseViewModel(db) {
         _filter.pageSize=10
         _showWaiting.value= false
         _showCenterWaiting.value=false
+        _selectedStatusId.value=_filter.statusId
     }
     fun getOrderStatuses(context:Context){
         uiScope.launch {
@@ -128,6 +132,7 @@ class OrderViewModel( db: UserDao?) : BaseViewModel(db) {
     }
     fun setStatus(statusId:Int,context: Context){
         _filter.statusId=statusId
+        _selectedStatusId.value=statusId
        _orders.value= mutableListOf()
         _filter.page=1
         onGetOrders(context)

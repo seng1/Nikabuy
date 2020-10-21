@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewModel"
-            type="com.skailab.nikabuy.viewModels.BoxPaymentViewModel" />
+            type="com.skailab.nikabuy.viewModels.OrderPayAllViewModel" />
     </data>
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,53 +15,63 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/box_number"
+                android:layout_centerVertical="true"
+                android:text="Total Purchase Order"
+                android:textSize="@dimen/text_size"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text=": "
+                android:textSize="@dimen/text_size"
                 />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.box.title}"
+                android:layout_centerVertical="true"
+                android:text="@{viewModel.totalOrder.toString()}"
+                android:textSize="@dimen/text_size"
                 />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text="@string/total_amount"
+                android:textSize="@dimen/text_size"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:text=": "
+                android:textSize="@dimen/text_size"
                 />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:Price="@{viewModel.box.shippingFee}"
+                android:layout_centerVertical="true"
+                app:Price="@{viewModel.totalAmount}"
+                android:textSize="@dimen/text_size"
                 />
         </LinearLayout>
         <com.google.android.material.textfield.TextInputLayout
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:hint="@string/your_payment_password"
             >
             <com.google.android.material.textfield.TextInputEditText
@@ -75,17 +85,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:layout_margin="10dp"
             android:textStyle="bold"
             android:text="@string/forget_payment_password_please_contact_to"
             />
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnPay"
             android:textAllCaps="false"
-            android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/pay"

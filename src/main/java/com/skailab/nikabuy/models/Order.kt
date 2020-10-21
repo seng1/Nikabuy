@@ -1,7 +1,5 @@
 package com.skailab.nikabuy.models
 
-import com.skailab.nikabuy.adapter.order.FooterViewHolder
-import com.skailab.nikabuy.adapter.order.HeaderViewHolder
 
 open class Order {
     var id:Int?=0
@@ -18,3 +16,8 @@ open class Order {
     var showCancelButton:Boolean?=false
 
 }
+open class MulitpleOrderPayment(
+    var buyerId:Int?=0,
+    var password:String?="",
+    var orders:List<Order>?=null
+)

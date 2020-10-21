@@ -146,6 +146,17 @@ class RegisterFragment : Fragment() {
                }.show()
            return
        }
+       if(binding.viewModel!!.register.value!!.paymentPassword.isEmpty()){
+           binding.viewModel!!.showMadal(requireContext(),getString(R.string.payment_password_require))
+           return
+       }
+       val totalLength=binding.viewModel!!.register.value!!.paymentPassword.length
+       if(totalLength!=4){
+           binding.viewModel!!.showMadal(requireContext(),getString(R.string.payment_password_must_4_digit))
+           return
+       }
+
+
        var selectedSaleManText=binding.filledSaleMan.text.toString()
        binding.viewModel!!.register.value!!.saleManId=null
        binding.viewModel!!.saleMens.value!!.forEach {

@@ -10,3 +10,8 @@ class Box {
     var dateText:String?=""
     var paymentDateText:String?=""
 }
+class  MultiplePayBox(
+    var password:String?="",
+    var buyerId:Int?=null,
+    var boxes:List<Box>?=null
+)

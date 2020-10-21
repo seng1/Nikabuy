@@ -26,8 +26,7 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="16dp"
-                android:tint="?android:attr/textColorPrimary"
-                app:srcCompat="@drawable/baseline_account_circle_black_48"
+                app:srcCompat="@drawable/you_avatar"
                 android:contentDescription="@string/app_name"  />
             <LinearLayout
                 android:layout_width="match_parent"

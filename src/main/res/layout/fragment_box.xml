@@ -79,7 +79,6 @@
                 android:text="@string/box_not_found" />
         </LinearLayout>
         <LinearLayout
-            android:layout_marginBottom="60dp"
             android:id="@+id/footer"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -106,6 +105,14 @@
                     android:text="@string/loading"
                     />
             </LinearLayout>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPayAll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:text="Pay All"
+                android:textAllCaps="false"
+                />
         </LinearLayout>
     </RelativeLayout>
 

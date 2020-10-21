@@ -26,8 +26,6 @@
                 app:itemSpacing="15dp"
                 app:singleLine="true"
                 app:singleSelection="true">
-
-
             </com.google.android.material.chip.ChipGroup>
         </HorizontalScrollView>
         <RelativeLayout
@@ -100,6 +98,24 @@
                     android:layout_marginTop="@dimen/margin_4"
                     android:text="@string/loading"
                     />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="bottom"
+                android:layout_marginBottom="40dp"
+                android:visibility="@{viewModel.selectedStatusId==2? View.VISIBLE:View.GONE}"
+                android:orientation="vertical">
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPayAll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.Button.Icon"
+                    android:text="Pay All"
+                    android:textAllCaps="false"
+                    />
+
             </LinearLayout>
         </RelativeLayout>
 

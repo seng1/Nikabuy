@@ -75,7 +75,7 @@
         
     <string name="new_purchase_order"> បង្កើតបញ្ជាទិញ </string>
     ​​
-    <string name="buyer"> អ្នកទិញ </string>
+    <string name="buyer"> ព័ត៌មានអ្នកប្រើប្រាស់ </string>
         
     <string name="new_deposit"> ដាក់ប្រាក់ </string>
         
@@ -290,8 +290,8 @@
         
     <string name="register_with_facebook"> ចុះឈ្មោះជាមួយហ្វេសប៊ុក </string>
     <string name="past_goods_url_or_key_phrase">past goods url or key phrase</string>
-    <string name="alibaba_1688">1688.com</string>
-    <string name="taobao">taobao.com,tmall.com</string>
+    <string name="alibaba_1688">1688</string>
+    <string name="taobao">Taobao-Tmall</string>
     <string name="text_search_require">អត្ថបទគឺត្រូវការ</string>
     <string name="search_product_not_found">រកមិនឃើញផលិតផល</string>
     <string name="take_photo">ថតរូប</string>
@@ -329,5 +329,17 @@
     <string name="please_select_sale_man">សូមជ្រើសរើសអ្នកលក់</string>
     <string name="name_require">ឈ្មោះទគឺត្រូវការ</string>
     <string name="share">ចែករំលែក</string>
-
+    <string name="click_below_image_to_upload">ចុចត្រង់នេះបញ្ចូលវិក័្កយប័ត្រវេប្រាក់</string>
+    <string name="source">ប្រភព</string>
+    <string name="minimum_quantity">បរិមាណអប្បបរមា</string>
+    <string name="please_choose">សូម​ជ្រើសរើស:</string>
+    <string name="no_box_to_pay">គ្មានប្រអប់សម្រាប់បង់ប្រាក់ទេ</string>
+    <string name="total_box">ចំនួនប្រអប់សរុប</string>
+    <string name="total_amount">​ទឹកប្រាក់សរុប</string>
+    <string name="create_payment_password">បង្កើតពាក្យសម្ងាត់ទូទាត់ប្រាក់</string>
+    <string name="box_number">លេខប្រអប់</string>
+    <string name="passcode">លេខកូដសម្ងាត់</string>
+    <string name="forget_payment_password_please_contact_to">ប្រសិនបើអ្នកភ្លេចលេខកូដបង់ប្រាក់សូមទាក់ទងមកផ្នែកបំរើអតិថិជនរបស់យើង ០៩៨ ៣៣៣ ៧៥៣</string>
+    <string name="no_purchase_order_to_pay">អ្នកមិនមានបញ្ជាទិញដើម្បីបង់ប្រាក់ទេ</string>
+    <string name="rate">អត្រា</string>
 </resources>

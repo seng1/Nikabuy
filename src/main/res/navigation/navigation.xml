@@ -42,6 +42,9 @@
         <action
             android:id="@+id/action_homeFragment_to_updateSaleManFragment"
             app:destination="@id/updateSaleManFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newPaymentPasswordFragment"
+            app:destination="@id/newPaymentPasswordFragment" />
     </fragment>
     <fragment
         android:id="@+id/cardFragment"
@@ -384,4 +387,9 @@
         android:name="com.skailab.nikabuy.saleMen.UpdateSaleManFragment"
         android:label="@string/saleman"
         tools:layout="@layout/fragment_update_sale_man" />
+    <fragment
+        android:id="@+id/newPaymentPasswordFragment"
+        android:name="com.skailab.nikabuy.payment.NewPaymentPasswordFragment"
+        android:label="@string/create_payment_password"
+        tools:layout="@layout/fragment_new_payment_password" />
 </navigation>
