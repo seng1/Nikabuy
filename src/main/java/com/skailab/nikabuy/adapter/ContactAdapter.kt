@@ -21,6 +21,9 @@ class ContactAdapter( val onClickListener: OnClickListener, val onDeleteClickLis
         holder.itemView.btnDeleteContact.setOnClickListener({
             onDeleteClickListener.onClick(product,position)
         })
+        holder.itemView.btnUpdateContact.setOnClickListener {
+            onClickListener.onClick(product)
+        }
         holder.setIsRecyclable(false)
         holder.bind(product)
     }

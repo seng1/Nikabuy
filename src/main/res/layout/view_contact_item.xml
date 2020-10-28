@@ -67,6 +67,14 @@
                 android:orientation="horizontal"
                 android:gravity="center_horizontal">
                 <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnUpdateContact"
+                    android:textAllCaps="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    />
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnDeleteContact"
                     android:textAllCaps="false"
                     android:layout_width="wrap_content"

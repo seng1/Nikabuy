@@ -20,12 +20,26 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:text=""
-                    android:id="@+id/chkCheck"
-                    android:layout_marginTop="20dp"
-                    android:layout_height="wrap_content"/>
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <CheckBox
+                        android:layout_width="wrap_content"
+                        android:text=""
+                        android:id="@+id/chkCheck"
+                        android:gravity="top"
+                        android:layout_height="wrap_content"/>
+                    <ImageButton
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/md_transparent"
+                        android:src="@drawable/icons_delete" />
+                </LinearLayout>
                 <ImageView
                     android:layout_toRightOf="@+id/rndSelect"
                     android:id="@+id/img"
@@ -91,25 +105,37 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
+                android:layout_gravity="center"
                 android:gravity="center"
                 android:orientation="horizontal">
-                <Button
+                <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/edit"
-                    android:textAllCaps="false"
+                    android:text="@string/total"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=": "/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorYellowPrimaryDark"
+                    android:id="@+id/textViewTotal"
+                    />
+                <ImageButton
                     android:id="@+id/messageBtn"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    />
-                <Button
-                    android:id="@+id/deleteBtn"
-                    android:layout_width="wrap_content"
+                    android:layout_width="30dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/delete"
-                    android:textAllCaps="false"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    />
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/md_transparent"
+                    android:src="@drawable/icons_edit_chat" />
+                <ImageButton
+                    android:id="@+id/messageNoBtn"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/md_transparent"
+                    android:src="@drawable/icons_edit_chat_no" />
             </LinearLayout>
 
         </LinearLayout>

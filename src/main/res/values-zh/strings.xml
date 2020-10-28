@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Nikabuy</string>
-    <string name="facebook_app_id">545166779479399</string>
     <string name="fb_login_protocol_scheme">fb545166779479399</string>
+    <string name="facebook_app_id">545166779479399</string>
     <string name ="home_text">主页</string>
     <string name ="card_text">购物车</string>
     <string name ="order_text">订单</string>

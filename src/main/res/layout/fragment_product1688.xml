@@ -51,9 +51,10 @@
                         </androidx.cardview.widget.CardView>
                         <LinearLayout
                             android:layout_width="match_parent"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:padding="16dp">
+                            android:orientation="vertical">
 
                             <!-- Title, secondary and supporting text -->
                             <TextView
@@ -62,7 +63,6 @@
                                 android:text="@={viewModel.product.title}"
                                 android:textSize="@dimen/text_size"
                                 android:textStyle="bold"
-                                android:gravity="center"
                                 android:lines="2"/>
 
                             <LinearLayout
@@ -80,6 +80,7 @@
                                         android:layout_height="wrap_content"
                                         android:text="@string/source"
                                         android:textSize="@dimen/text_size"
+
                                         />
                                     <TextView
                                         android:layout_width="match_parent"
@@ -102,7 +103,9 @@
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textColor="@color/colorAccent"
+                                        android:textStyle="bold"
+                                        android:textSize="16sp"
+                                        android:textColor="@color/colorYellowPrimaryDark"
                                         android:text="@{viewModel.product.discountPriceRangetext}"
                                         android:textAppearance="?attr/textAppearanceBody2"
                                         />
@@ -143,34 +146,12 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="right"
                                     android:gravity="right">
-                                    <TextView
+                                    <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        app:strikeThrough="@{viewModel.product.orginalPriceRangetext}"
-                                        />
-                                </LinearLayout>
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-                                <LinearLayout
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:gravity="left"
-                                    android:layout_gravity="left">
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:textSize="@dimen/text_size"
-                                        android:layout_height="wrap_content"
-                                        android:text="@string/minimum_quantity"
-                                        />
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:textSize="@dimen/text_size"
-                                        android:layout_height="wrap_content"
-                                        android:text=": "
+                                        android:src="@drawable/icons_more_or_equal"
+                                        android:scaleType="centerCrop"
+                                        android:layout_gravity="center_vertical"
                                         />
                                     <TextView
                                         android:layout_width="wrap_content"
@@ -180,166 +161,160 @@
                                         android:layout_marginLeft="5dp"
                                         android:id="@+id/textViewMinimumQty"/>
                                 </LinearLayout>
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="horizontal"
-                                    android:layout_gravity="right"
-                                    android:gravity="right">
-                                    <androidx.appcompat.widget.AppCompatTextView
+                            </LinearLayout>
+                            <TableLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TableRow  android:id="@+id/lnPriceTitle" >
+                                    <TextView
                                         android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:background="@drawable/table_row"
                                         android:textSize="@dimen/text_size"
-                                        android:text="@{viewModel.product.quantitySoldText}">
-                                    </androidx.appcompat.widget.AppCompatTextView>
-                                </LinearLayout>
+                                        android:text="@string/price" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/text_size"
+                                        android:text="@string/product"
+                                        android:textColor="@color/colorYellowPrimaryDark"
+                                        android:id="@+id/priceRange1" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:gravity="center"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:textSize="@dimen/text_size"
+                                        android:text="@string/service"
+                                        android:textColor="@color/colorYellowPrimaryDark"
+                                        android:id="@+id/priceRange2"/>
 
-                            </LinearLayout>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/text_size"
+                                        android:text="@string/level"
+                                        android:textColor="@color/colorYellowPrimaryDark"
+                                        android:id="@+id/priceRange3" />
+                                </TableRow>
+                                <TableRow   android:id="@+id/lnPriceValue">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/text_size"
+                                        android:text="@string/baches" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textSize="@dimen/text_size"
+                                        android:textColor="@color/colorYellowPrimaryDark"
+                                        android:id="@+id/priceRangeValue1" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:text=""
+                                        android:textSize="@dimen/text_size"
+                                        android:textColor="@color/colorYellowPrimaryDark"
+                                        android:id="@+id/priceRangeValue2"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:gravity="center"
+                                        android:background="@drawable/table_row"
+                                        android:layout_weight="1"
+                                        android:text=""
+                                        android:textSize="@dimen/text_size"
+                                        android:textColor="@color/colorYellowPrimaryDark"
+                                        android:id="@+id/priceRangeValue3" />
 
-                            <LinearLayout
+                                </TableRow>
+                            </TableLayout>
+                            <TableLayout
+                                android:layout_marginTop="5dp"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_gravity="center"
-                                android:id="@+id/lnPriceTitle"
-                                android:gravity="center">
-                                <TextView
-                                android:layout_width="70dp"
-                                android:layout_height="wrap_content"
-                                android:text="@string/price"
-                                    android:textSize="@dimen/text_size"
-                                />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    android:id="@+id/priceRange1"
-                                    android:textSize="@dimen/text_size"
-                                    />
-                                <TextView
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    android:id="@+id/priceRange2"
-                                    android:textSize="@dimen/text_size"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    android:id="@+id/priceRange3"
-                                    android:textSize="@dimen/text_size"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_gravity="center"
-                                android:id="@+id/lnPriceValue"
-                                android:gravity="center">
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/baches"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    android:id="@+id/priceRangeValue1"
-                                    />
-                                <TextView
-                                    android:layout_width="100dp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    android:id="@+id/priceRangeValue2"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="wrap_content"
-                                    android:text=""
-                                    android:id="@+id/priceRangeValue3"
-                                    />
-                            </LinearLayout>
+                                android:layout_height="wrap_content">
+                                <TableRow    >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:background="@drawable/table_row"
+                                        android:text="@string/score" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:text="@string/product" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:gravity="center"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:text="@string/service"/>
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:gravity="center"
-                                android:layout_gravity="center">
-                                <TextView
-                                    android:layout_width="100dp"
-                                    android:gravity="center"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/score"
-                                    android:textSize="@dimen/text_size"
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:text="@string/level" />
+                                </TableRow>
+                                <TableRow  android:background="@drawable/table_row"  >
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:text="@{viewModel.product.vendorInfo.scores.itemScore.toString()}" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:text="@{viewModel.product.vendorInfo.scores.serviceScore.toString()}" />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:layout_weight="1"
+                                        android:background="@drawable/table_row"
+                                        android:gravity="center"
+                                        android:text="@{viewModel.product.vendorInfo.scores.serviceScore.toString()}"/>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="30dp"
+                                        android:gravity="center"
+                                        android:background="@drawable/table_row"
+                                        android:layout_weight="1"
+                                        android:text="@{viewModel.product.vendorInfo.credit.level.toString()}" />
 
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/product"
-                                    android:textSize="@dimen/text_size"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/service"
-                                    android:textSize="@dimen/text_size"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/delivery"
-                                    android:textSize="@dimen/text_size"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/level"
-                                    android:textSize="@dimen/text_size"
-                                    />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:gravity="center"
-                                android:layout_gravity="center">
-                                <TextView
-                                    android:layout_width="100dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@string/rate"
-                                    android:gravity="center"
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@{viewModel.product.vendorInfo.scores.itemScore.toString()}"
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@{viewModel.product.vendorInfo.scores.serviceScore.toString()}"
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@{viewModel.product.vendorInfo.scores.deliveryScore.toString()}"
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    />
-                                <TextView
-                                    android:layout_width="70dp"
-                                    android:layout_height="match_parent"
-                                    android:text="@{viewModel.product.vendorInfo.credit.level.toString()}"
-                                    android:textAppearance="?attr/textAppearanceBody2"
-                                    />
-                            </LinearLayout>
+                                </TableRow>
+                            </TableLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
@@ -348,7 +323,8 @@
                     android:layout_height="match_parent"
                     android:textSize="@dimen/text_size"
                     android:text="@string/recommend_product"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginBottom="10dp"
                     />
                 <androidx.recyclerview.widget.RecyclerView
@@ -373,6 +349,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="5dp"
                     android:text="@string/product_description"
                     android:textSize="@dimen/text_size"
                     android:layout_marginRight="10dp"

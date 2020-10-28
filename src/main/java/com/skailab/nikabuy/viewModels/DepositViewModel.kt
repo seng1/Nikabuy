@@ -8,6 +8,7 @@ import com.skailab.nikabuy.models.Deposit
 import com.skailab.nikabuy.models.filter.DepositFilter
 import com.skailab.nikabuy.room.UserDao
 import com.skailab.nikabuy.services.DepositServiceApi
+import com.skailab.nikabuy.services.UserServiceApi
 import kotlinx.coroutines.launch
 
 class DepositViewModel( db: UserDao?) : BaseViewModel(db) {
@@ -18,12 +19,15 @@ class DepositViewModel( db: UserDao?) : BaseViewModel(db) {
     val accountBalance: LiveData<Double> get() = _accountBalance
     private val _showWaiting = MutableLiveData<Boolean>()
     val showWaiting: LiveData<Boolean> get() = _showWaiting
+    private val _exchangeRate = MutableLiveData<Double>()
+    val exchangeRate: LiveData<Double> get() = _exchangeRate
     init {
         filter.isGetBalance=true
         filter.pageSize=10
         _deposits.value= mutableListOf()
         _accountBalance.value=0.0
         _showWaiting.value=false
+        _exchangeRate.value=0.0
     }
     fun getDeposits(context:Context){
         filter.buyerId=userEntity.value!!.buyerId!!
@@ -44,6 +48,15 @@ class DepositViewModel( db: UserDao?) : BaseViewModel(db) {
             } catch (e: Exception) {
                 displayException(context,e)
 
+            }
+        }
+        uiScope.launch {
+            val result = UserServiceApi.retrofitService.getBuyerDashboardAsync(userEntity.value!!.buyerId).await()
+            if(!result.isSucess){
+                showMadal(context,result.errorText)
+            }
+            else{
+                _exchangeRate.value=result.buyerDashboard!!.exchangeRate
             }
         }
     }

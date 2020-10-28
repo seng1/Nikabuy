@@ -24,7 +24,7 @@ fun bindPrice(textView: TextView, price: Double?) {
         textView.text=""
         return
     }
-    textView.text=price.toString()+" $"
+    textView.text="$"+price.toString()
     //textView.text=price!!.toBigDecimal().setScale(2, RoundingMode.UP).toDouble().toString()+  " $";
 }
 @BindingAdapter("productItemData")

@@ -52,6 +52,12 @@ class productTaobaoFragment : Fragment() {
                 binding.imageSlider.setIndicatorAnimation(IndicatorAnimations.WORM)
                 binding.imageSlider.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION)
                 LocaleHelper.bindProductDescription(binding.webView,product.description!!)
+                if(product.orginalSelectedSkuText==null || product.quantitySoldText.isNullOrEmpty()){
+                    binding.txtViewQuantitySoldText.visibility=View.GONE
+                }
+                else{
+                    binding.txtViewQuantitySoldText.visibility=View.VISIBLE
+                }
                 binding.nestedScroll.fullScroll(View.FOCUS_UP)
             }
         })

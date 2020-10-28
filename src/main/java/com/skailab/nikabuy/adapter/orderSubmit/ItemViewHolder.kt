@@ -15,6 +15,7 @@ class ItemViewHolder(val rootView: View) :
         Picasso.get().load(cart.imageUrl).placeholder(App.resourses!!.getDrawable(R.drawable.no_image,null)).into(rootView.img)
         rootView.txtDetail.text=cart.title
         rootView.txtSku.text=cart.skuText
+
         rootView.textViewPrice.text=cart.quantity!!.toString()+"*" + cart.price.toString()+"="+ LocaleHelper.priceFormat (cart.quantity!!*cart.price!!)
     }
 }

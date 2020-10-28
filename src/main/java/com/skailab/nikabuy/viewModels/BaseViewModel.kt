@@ -243,9 +243,9 @@ open class BaseViewModel(var database: UserDao?): ViewModel() {
             textView.text=""
             return
         }
-        textView.text=getThreeDigit(price!!).toString()+" $"
+        textView.text="$"+getThreeDigit(price!!).toString()
     }
     fun priceFormat(price: Double?):String {
-        return getThreeDigit(price!!).toString()+" $"
+        return "$"+getThreeDigit(price!!).toString()
     }
 }

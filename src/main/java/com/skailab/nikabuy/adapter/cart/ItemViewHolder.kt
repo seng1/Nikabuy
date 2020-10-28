@@ -20,16 +20,24 @@ class ItemViewHolder(val rootView: View) :
         rootView.txtSku.text=cart.skuText
         rootView.quantity.setText(cart.quantity.toString())
         rootView.messageBtn.visibility=View.GONE
-        rootView.messageBtn.visibility=View.VISIBLE
+        rootView.messageNoBtn.visibility=View.GONE
         if(cart.isSelected!!){
             rootView.chkCheck.isChecked=true
         }
         else{
             rootView.chkCheck.isChecked=false
         }
+        if(cart.description.isNullOrEmpty()){
+            rootView.messageNoBtn.visibility=View.VISIBLE
+        }
+        else{
+            rootView.messageBtn.visibility=View.VISIBLE
+        }
         setPrice(cart)
     }
     fun setPrice(cart: Cart){
-        rootView.textViewPrice.text="*" + cart.price.toString()+"="+LocaleHelper.priceFormat (cart.quantity!!*cart.price!!)
+        rootView.textViewPrice.text=LocaleHelper.priceFormat(cart.price)
+        var total:Double=cart.quantity!!*cart.price!!
+        rootView.textViewTotal.text=LocaleHelper.priceFormat(total)
     }
 }

@@ -49,7 +49,7 @@
                     android:lines="1"
                     android:gravity="center"
                     android:text="@{viewModel.discountPriceRangetext}"
-                    android:textColor="@color/colorAccent" />
+                    android:textColor="@color/colorYellowPrimaryDark" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

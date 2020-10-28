@@ -52,6 +52,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="@color/colorYellowPrimaryDark"
                             android:id="@+id/textViewPrice">
                         </TextView>
                     </LinearLayout>

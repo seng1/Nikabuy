@@ -55,25 +55,45 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_gravity="center_horizontal"
-                    android:gravity="center_horizontal"
                     >
-                    <TextView
-                        android:id="@+id/textViewProductPrice"
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/text_size"
-                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                        android:text="@{viewModel.discountPriceRangetext}"
-                        android:textColor="@color/colorAccent" />
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/textViewProductPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/text_size"
+                            android:gravity="left"
+                            android:layout_marginLeft="10dp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            android:text="@{viewModel.discountPriceRangetext}"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorYellowPrimaryDark" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:layout_gravity="right">
+                        <TextView
+                            android:id="@+id/textOrginalProductPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right"
+                            android:layout_gravity="right"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                            app:strikeThrough="@{viewModel.orginalPriceRangetext}"
+                            />
+                    </LinearLayout>
+
 
                 </LinearLayout>
             </LinearLayout>
-
-
-
-
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 

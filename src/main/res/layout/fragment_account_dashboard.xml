@@ -90,6 +90,7 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
                     android:id="@+id/lnRate"
+                    android:visibility="gone"
                     android:layout_below="@+id/lnPr"
                     android:gravity="center_horizontal">
                     <TextView

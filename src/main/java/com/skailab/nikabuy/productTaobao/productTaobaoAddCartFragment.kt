@@ -197,7 +197,9 @@ class productTaobaoAddCartFragment : Fragment() {
         }
     }
     private fun  calculateTotal(binding:FragmentProducttaobaoAddCartBinding){
-        binding.textViewTotal.text="*"+binding.viewModel!!.product.value!!.unitPrice.toString()+"="+binding.viewModel!!.priceFormat(binding.viewModel!!.product.value!!.quantity!! * binding.viewModel!!.product.value!!.unitPrice!!)
+        binding.textViewUnitPrice.text=binding.viewModel!!.priceFormat(binding.viewModel!!.product.value!!.unitPrice)
+        var total:Double=binding.viewModel!!.product.value!!.unitPrice!!*binding.viewModel!!.product.value!!.quantity!!
+        binding.textViewTotal.text=binding.viewModel!!.priceFormat(total)
     }
 
 }

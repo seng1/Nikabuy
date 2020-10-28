@@ -1,12 +1,11 @@
 <resources>
     <string name="facebook_app_id">545166779479399</string>
+    <string name="fb_login_protocol_scheme">fb545166779479399</string>
     <string name="app_name">Nikabuy</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="home_text">Home</string>
     <string name="card_text">Cart</string>
     <string name="order_text">Order</string>
     <string name="account_text">Account</string>
-    <string name="fb_login_protocol_scheme">fb545166779479399</string>
     <string name="log_in_or_register_with_your_phone">Sign in or register with your phone number</string>
     <string name="log_in">Login</string>
     <string name="or">Or</string>

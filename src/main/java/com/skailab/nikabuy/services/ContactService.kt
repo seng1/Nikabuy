@@ -21,6 +21,8 @@ interface ContactService {
     fun  getRegionsAsync(@Body data: Filter) : Deferred<RegionApiResult>
     @POST("contact/CreateContact/{buyerId}")
     fun  createContactAsync(@Path("buyerId") buyerId:Int,@Body data: Contact) : Deferred<ApiResult>
+    @POST("contact/UpdateContact/{buyerId}")
+    fun  updateContactAsync(@Path("buyerId") buyerId:Int,@Body data: Contact) : Deferred<ApiResult>
 }
 object ContactServiceApi{
     val retrofitService:ContactService by lazy { retrofit.create(ContactService::class.java)}

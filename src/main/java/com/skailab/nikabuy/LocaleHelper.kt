@@ -82,7 +82,7 @@ object LocaleHelper {
         return (px/Resources.getSystem().displayMetrics.density).toInt()
     }
     fun priceFormat(price: Double?):String {
-        return getThreeDigit(price!!).toString()+" $"
+        return "$"+getThreeDigit(price!!).toString()
     }
     fun getThreeDigit(value:Double):Double{
         val bd: BigDecimal = BigDecimal(value).setScale(3, RoundingMode.HALF_UP)

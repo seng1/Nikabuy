@@ -1,293 +1,152 @@
 <resources>
-    <string name="app_name">Nikabuy</string>
     <string name="facebook_app_id">545166779479399</string>
     <string name="fb_login_protocol_scheme">fb545166779479399</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Nikabuy</string>
     <string name="home_text">ទំព័រដើម</string>
     <string name="card_text"> រទេះ </string>
     <string name="order_text">កំ​ម៉​ង់​ទិញ</string>
     <string name="account_text"> គណនី </string>
-     
     <string name="log_in_or_register_with_your_phone"> ចូលឬចុះឈ្មោះជាមួយលេខទូរស័ព្ទរបស់អ្នក </string>
     <string name="log_in"> ចូល </string>
-        
     <string name="or"> ឬ </string>
-        
     <string name="register"> ចុះឈ្មោះ </string>
-        
     <string name="connect_with"> ភ្ជាប់ជាមួយ </string>
-        
     <string name="log_in_with_facebook"> ចូលជាមួយហ្វេសប៊ុក </string>
-        
     <string name="log_in_with_b2c"> ចូលជាមួយ Microsoft </string>
-        
     <string name="phone_number"> លេខទូរស័ព្ទ </string>
-        
     <string name="password"> ពាក្យសម្ងាត់ </string>
-        
     <string name="confirm_password"> បញ្ជាក់ពាក្យសម្ងាត់ </string>
-        
     <string name="submit">ដាក់ស្នើ</string>
-        
     <string name="ok"> យល់ព្រម </string>
-        
     <string name="phone_require"> លេខទូរស័ព្ទគឺត្រូវការ </string>
     <string name="password_require"> លេខសំងាត់ត្រូវការ </string>
-        
     <string name="confirm_password_require"> បញ្ជាក់លេខសំងាត់ទាមទារ</string>
-        
     <string name="password_and_confirm_password_not_the_same"> ពាក្យសម្ងាត់និងបញ្ជាក់ពាក្យសម្ងាត់មិនដូចគ្នាទេ </string>
-        
     <string name="verification_code_just_sent"> យើងទើបតែបានផ្ញើលេខកូដផ្ទៀងផ្ទាត់ (៤ ខ្ទង់) ដល់អ្នក </string>
-        
     <string name="verification_code"> កូដផ្ទៀងផ្ទាត់ </string>
-        
     <string name="confirm"> បញ្ជាក់ </string>
-        
     <string name="not_get_verification_code_question"> មិនបានទទួលលេខកូដផ្ទៀងផ្ទាត់ទេ? </string>
-        
     <string name="verification_code_not_correct"> លេខកូដផ្ទៀងផ្ទាត់មិនត្រឹមត្រូវ </string>
-    ​​
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="loading"> សូមរង់ចាំ ... </string>
-        
     <string name="clear"> ជម្រះ </string>
-        
     <string name="delete"> លុប </string>
-        
     <string name="edit"> កែសម្រួល </string>
-        
     <string name="orders"> ការបញ្ជាទិញ </string>
-        
     <string name="account"> គណនី </string>
-        
     <string name="image_search"> រូបភាព </string>
-        
     <string name="audio_search"> សំលេង</string>
-        
     <string name="text_search"> អត្ថបទ </string>
-        
     <string name="good_detail"> ព័ត៌មានទំនិញ </string>
-        
     <string name="good_score"> ពិន្ទុទំនិញ </string>
-        
     <string name="recommend_product"> ណែនាំទំនិញ </string>
-        
     <string name="new_purchase_order"> បង្កើតបញ្ជាទិញ </string>
-    ​​
     <string name="buyer"> ព័ត៌មានអ្នកប្រើប្រាស់ </string>
-        
     <string name="new_deposit"> ដាក់ប្រាក់ </string>
-        
     <string name="payment_password"> ពាក្យសម្ងាត់ទូទាត់ </string>
-        
     <string name="my_box"> ប្រអប់របស់ខ្ញុំ </string>
-        
     <string name="contact"> ទំនាក់ទំនង </string>
-        
     <string name="forget_password"> ភ្លេចពាក្យសម្ងាត់ </string>
-        
     <string name="account_link"> តំណគណនី </string>
-        
     <string name="mobile_link">ភ្ចាប់ជាមួយលេខទូរស័ព្ទ</string>
-        
     <string name="new_contact"> បង្កើតទំនាក់ទំនង </string>
-        
     <string name="deposit"> ការដាក់ប្រាក់ </string>
-        
     <string name="language"> ភាសា </string>
-        
     <string name="signout"> ចាកចេញ </string>
     <string name="yuan_usd"> អត្រា (ដុល្លារ - CNY)៖ </string>
-        
     <string name="saleman"> អ្នកលក់ </string>
-        
     <string name="add_saleman"> បង្កើតអ្នកលក់</string>
-        
     <string name="add_to_cart"> បន្ថែមទៅកន្ត្រកទំនិញ </string>
-        
     <string name="detail"> លំអិត </string>
-        
     <string name="score"> ពិន្ទុ </string>
-        
     <string name="vendor"> អ្នកលក់ </string>
-        
     <string name="service_score"> ពិន្ទុសេវាកម្ម </string>
-        
     <string name="delivery_score"> ពិន្ទុចែកចាយ </string>
-        
     <string name="credit_level"> កម្រិតឥណទាន </string>
-        
     <string name="quantity"> បរិមាណ </string>
-        
     <string name="message_to_customer_service"> សារទៅសេវាកម្មអតិថិជន </string>
-    ​​
     <string name="buy_now"> បន្ថែមទៅការបញ្ជាទិញ </string>
-        
     <string name="quantity_require"> បរិមាណត្រូវការតំរូវ</string>
-        
     <string name="you_don_have_cart"> អ្នកមិនទាន់មានរទេះនៅឡើយទេ</string>
-        
     <string name="select_all"> យកទាំងអស់</string>
     <string name="un_select_all">មិនជ្រើសរើស</string>
-        
     <string name="shop"> ហាង </string>
-        
     <string name="unit_price"> តម្លៃឯកតា </string>
-        
     <string name="do_you_want_to_clear_cart"> តើអ្នកប្រាកដជាចង់ជម្រះរទេះមែនទេ? </string>
-        
     <string name="yes">យល់ព្រម</string>
-        
-    <string name="no"> ទេ </string>
-        
-    <string name="do_you_want_to_remove_cart"> តើអ្នកប្រាកដជាចង់លុប </string>
-        
     <string name="cart_to_submit_require"> រទេះដាក់ស្នើគឺទាមទារ </string>
-        
     <string name="cart_add_success"> រទេះបន្ថែម ដោយជោគជ័យ</string>
-        
     <string name="go_to_cart"> ទៅកន្ត្រកទំនិញ </string>
-        
     <string name="back"> ថយក្រោយ </string>
-    ​​
     <string name="you_don_have_contact_create_now"> អ្នកមិនទាន់មានទំនាក់ទំនងនៅឡើយទេបង្កើតឥឡូវ </string>
-        
     <string name="mode_of_transportation"> របៀបដឹកជញ្ជូន </string>
-        
     <string name="delivery"> ការចែកចាយ </string>
-        
     <string name="payment_way"> វិធីទូទាត់ </string>
-        
     <string name="delivery_warehouse"> ឃ្លាំងដឹកជញ្ជូន </string>
-        
     <string name="protection"> ការកាពារ ដូចជា កេសឈើរឺ ឡាំង </string>
-        
     <string name="total_semi"> សរុប៖ </string>
-        
     <string name="contact_require"> ទំនាក់ទំនងគឺត្រូវការ </string>
-        
     <string name="select_image"> ជ្រើសរើសរូបភាព </string>
-        
     <string name="quantity_semi"> បរិមាណ៖ </string>
-        
     <string name="unit_price_semi"> តម្លៃឯកតា៖ </string>
-        
     <string name="qty"> ចំនួន </string>
-    ​
     <string name="is_protect"> បានការពារ </string>
-        
     <string name="pay"> បង់លុយ </string>
-        
     <string name="remark"> សំគាល់់ </string>
-        
     <string name="re_order"> ទិញម្តងទៀត </string>
-        
     <string name="cancel"> បោះបង់ </string>
-        
     <string name="order_not_found"> រកមិនឃើញការបញ្ជាទិញទេ។ </string>
-        
     <string name="print_remark"> កំណត់ចំណាំបោះពុម្ព </string>
-        
     <string name="do_you_want_cancel_order"> តើអ្នកប្រាកដជាចង់បោះបង់ការបញ្ជាទិញនេះ </string>
-        
     <string name="order_add_to_cart_sccuess_order_now_question"> ទិញធាតុបញ្ជាទិញបន្ថែមទៅកាន់កន្រ្តកដោយជោគជ័យតើអ្នកចង់ទិញឥឡូវនេះទេ? </string>
-        
     <string name="customer_cancel"> បោះបង់អតិថិជន </string>
-        
     <string name="payment_password_require"> ពាក្យសម្ងាត់បង់ប្រាក់គឺទាមទារ </string>
-        
     <string name="payment_password_must_4_digit"> ពាក្យសម្ងាត់ទូទាត់ត្រូវតែមាន ៤ ខ្ទង់ </string>
-        
     <string name="to_be_order">កំពុងប្រតិបត្តិ ការបញ្ជារទិញ </string>
-    ​​​
     <string name="your_payment_password"> ពាក្យសម្ងាត់ទូទាត់របស់អ្នក </string>
-        
     <string name="box_Protection_semi"> ការការពារប្រអប់៖ </string>
-        
     <string name="service_charge_semi"> ថ្លៃសេវាកម្ម៖ </string>
-        
     <string name="shipping_fee_in_china_semi"> ថ្លៃដឹកជញ្ជូននៅចិន៖ </string>
-        
     <string name="extra_charge_semi"> បន្ទុកបន្ថែម៖ </string>
-        
     <string name="insurance_fee_semi"> ថ្លៃធានារ៉ាប់រង៖ </string>
-        
     <string name="product_total_amount_semi"> ចំនួនផលិតផលសរុប៖ </string>
-        
     <string name="customer_name_semi"> ឈ្មោះអតិថិជន៖ </string>
-        
     <string name="customer_number_semi"> ចំនួនអតិថិជន៖ </string>
-        
     <string name="your_account_balance_semi"> សមតុល្យគណនីរបស់អ្នក៖ </string>
-        
     <string name="bank_detail"> ពត៌មានធនាគារ </string>
-        
     <string name="deposit_amount"> ចំនួនទឹកប្រាក់នៃការដាក់ប្រាក់ </string>
-        
     <string name="transaction_id"> លេខសម្គាល់ប្រតិបត្តិការ </string>
-        
     <string name="date"> កាលបរិច្ឆេទ </string>
-        
     <string name="select_date"> ជ្រើសរើសកាលបរិច្ឆេទ </string>
-    ​​
     <string name="comfirm_recharge"> បញ្ចូលទឹកប្រាក់បន្ថែម </string>
-        
     <string name="image_require"> រូបភាពត្រូវការ</string>
-        
     <string name="amount_require"> ចំនួនទឹកប្រាក់ត្រូវការ</string>
-        
     <string name="transaction_id_require"> លេខសម្គាល់ប្រតិបត្តិការត្រូវការ </string>
-        
     <string name="date_require"> កាលបរិច្ឆេទត្រូវការ </string>
-        
     <string name="all"> ទាំងអស់</string>
-        
     <string name="waiting_for_payment"> រង់ចាំការទូទាត់ </string>
-        
     <string name="paid"> បង់រួច </string>
-        
     <string name="box_not_found"> ​​ប្រអប់របស់ខ្ញុំរកមិនឃើញទេ</string>
-        
     <string name="default_contact"> ទំនាក់ទំនងលំនាំដើម </string>
-        
     <string name="do_want_to_delete_contact"> តើអ្នកប្រាកដទេថាអ្នកចង់លុបអាសយដ្ឋាននេះ? </string>
-        
     <string name="you_don_have_contact_yet"> អ្នកមិនទាន់មានអាសយដ្ឋានទំនាក់ទំនងនៅឡើយទេ </string>
-        
     <string name="contact_name"> ឈ្មោះទំនាក់ទំនង </string>
-        
     <string name="country"> ប្រទេស </string>
-        
     <string name="province"> ខេត្ត </string>
-        
     <string name="district"> ស្រុក </string>
-        
     <string name="address"> អាសយដ្ឋាន </string>
-        
     <string name="google_map"> ផែនទី Google </string>
-        
     <string name="save"> រក្សាទុក </string>
     <string name="contact_name_require"> ឈ្មោះទំនាក់ទំនងត្រូវការរ </string>
-        
     <string name="phone_number_require"> លេខទូរស័ព្ទត្រូវការ </string>
-        
     <string name="country_require"> ប្រទេសគឺត្រូវការ </string>
-        
     <string name="province_require"> ខេត្តគឺត្រូវការ </string>
-        
     <string name="district_require"> ស្រុកត្រូវការ </string>
-        
     <string name="address_require"> អាស័យដ្ឋានត្រូវមាន </string>
-        
     <string name="link_your_mobile"> ភ្ជាប់លេខស័ព្ទដៃ</string>
-        
     <string name="saleman_code"> លេខកូដអ្នកលក់</string>
-        
     <string name="forget_password_quastion"> ភ្លេចពាក្យសំងាត់? </string>
-        
     <string name="login_with_facebook"> ចូលជាមួយហ្វេសប៊ុក </string>
-        
     <string name="register_with_facebook"> ចុះឈ្មោះជាមួយហ្វេសប៊ុក </string>
     <string name="past_goods_url_or_key_phrase">past goods url or key phrase</string>
     <string name="alibaba_1688">1688</string>
