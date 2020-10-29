@@ -18,5 +18,6 @@ class HeaderViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
         view.txtTranspoation.text=order.transportationMethodInCh!!.title
         view.chkProtected.isChecked=order.isProtected!!
         view.txtStatus.text=order.orderStatus!!.title
+
     }
 }

@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"/>
         <TextView
             android:id="@+id/txtShop"
-            android:textColor="#FC0D17"
+            android:textColor="@color/whitColorUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />

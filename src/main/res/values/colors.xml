@@ -17,4 +17,5 @@
     <color name="colorText">#000000</color>
     <color name="colorYellowPrimary">#ff6600</color>
     <color name="colorYellowPrimaryDark">#fc0d17</color>
+    <color name="whitColorUser">#7a7a7a</color>
 </resources>

@@ -31,14 +31,7 @@
                         android:id="@+id/chkCheck"
                         android:gravity="top"
                         android:layout_height="wrap_content"/>
-                    <ImageButton
-                        android:id="@+id/deleteBtn"
-                        android:layout_width="20dp"
-                        android:layout_height="wrap_content"
-                        android:gravity="bottom"
-                        android:layout_marginLeft="5dp"
-                        android:background="@drawable/md_transparent"
-                        android:src="@drawable/icons_delete" />
+
                 </LinearLayout>
                 <ImageView
                     android:layout_toRightOf="@+id/rndSelect"
@@ -105,37 +98,62 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
+
                 android:orientation="horizontal">
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
+                    android:layout_marginLeft="115dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/total"/>
-                <TextView
-                    android:layout_width="wrap_content"
+                    android:gravity="left">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=": "/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textColor="@color/colorYellowPrimaryDark"
+                        android:id="@+id/textViewTotal"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text=": "/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorYellowPrimaryDark"
-                    android:id="@+id/textViewTotal"
-                    />
-                <ImageButton
-                    android:id="@+id/messageBtn"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="@drawable/md_transparent"
-                    android:src="@drawable/icons_edit_chat" />
-                <ImageButton
-                    android:id="@+id/messageNoBtn"
-                    android:layout_width="30dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:background="@drawable/md_transparent"
-                    android:src="@drawable/icons_edit_chat_no" />
+                    android:gravity="right"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+                    <ImageButton
+                        android:id="@+id/deleteBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="5dp"
+
+                        android:background="@drawable/md_transparent"
+                        android:src="@drawable/icons_delete" />
+                    <ImageButton
+                        android:id="@+id/messageBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/md_transparent"
+                        android:src="@drawable/icons_edit_chat" />
+                    <ImageButton
+                        android:id="@+id/messageNoBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/md_transparent"
+                        android:src="@drawable/icons_edit_chat_no" />
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
