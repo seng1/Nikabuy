@@ -18,4 +18,5 @@
     <dimen name="bottom_margin_bottom">55dp</dimen>
     <dimen name="text_edit_margin_right">5dp</dimen>
     <dimen name="text_edit_heigh">40dp</dimen>
+    <dimen name="dashboad_font_size">17sp</dimen>
 </resources>

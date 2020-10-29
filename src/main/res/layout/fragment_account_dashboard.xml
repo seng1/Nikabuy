@@ -191,18 +191,21 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/my_box"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text=" ("
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
+                            android:textSize="@dimen/dashboad_font_size"
                             android:text="@{viewModel.buyerDashboard.totalBox.toString()}"
                             />
                         <TextView
@@ -211,6 +214,7 @@
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
                             android:text=")"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -248,6 +252,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
+                            android:textSize="@dimen/dashboad_font_size"
                             android:text="@string/deposit"
                             />
                         <TextView
@@ -255,6 +260,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
+                            android:textSize="@dimen/dashboad_font_size"
                             android:text=" ("
                             />
                         <TextView
@@ -262,6 +268,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
+                            android:textSize="@dimen/dashboad_font_size"
                             app:Price="@{viewModel.buyerDashboard.totalBalance}"
                             />
                         <TextView
@@ -269,6 +276,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
+                            android:textSize="@dimen/dashboad_font_size"
                             android:text=")"
                             />
                         <LinearLayout
@@ -308,18 +316,21 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/contact"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text=" ("
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
+                            android:textSize="@dimen/dashboad_font_size"
                             android:text="@{viewModel.buyerDashboard.totalContact.toString()}"
                             />
                         <TextView
@@ -328,6 +339,7 @@
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
                             android:text=")"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -367,6 +379,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/payment_password"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -405,12 +418,14 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/account_link"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text=" ("
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <TextView
                             android:layout_width="wrap_content"
@@ -418,6 +433,7 @@
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
                             android:text="@{viewModel.buyerDashboard.totalAccount.toString()}"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <TextView
                             android:layout_width="wrap_content"
@@ -425,6 +441,7 @@
                             android:gravity="center_vertical"
                             android:paddingLeft="5dp"
                             android:text=")"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -463,6 +480,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="My Package"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -500,6 +518,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
+                            android:textSize="@dimen/dashboad_font_size"
                             android:text="ភាសា/Language/语言"
                             />
                         <LinearLayout
@@ -539,6 +558,7 @@
                             android:layout_height="match_parent"
                             android:gravity="center_vertical"
                             android:text="@string/signout"
+                            android:textSize="@dimen/dashboad_font_size"
                             />
                         <LinearLayout
                             android:layout_width="match_parent"

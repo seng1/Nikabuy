@@ -84,13 +84,13 @@ class ImageFragment : Fragment() {
                     container!!.findNavController().navigate(R.id.accountFragment)
                 }
                 else{
-                    if(binding.viewModel!!.isTaobao(binding.viewModel!!.productProvider)){
+                   /* if(binding.viewModel!!.isTaobao(binding.viewModel!!.productProvider)){
                         binding.chnGroupProvider.check(binding.chpTaobao.id)
                     }
                     else{
                         binding.chnGroupProvider.check(binding.chp1688.id)
-                    }
-                    binding.viewModel!!.filter.provider=binding.viewModel!!.productProvider
+                    }*/
+                    binding.viewModel!!.filter.provider=binding.viewModel!!.alibaba1688Provider
                 }
             }
         })

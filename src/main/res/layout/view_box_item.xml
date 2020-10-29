@@ -60,7 +60,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
                         android:text="@{viewModel.title}" />
                 </LinearLayout>
@@ -71,7 +71,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
                         android:gravity="right"
                         android:text="@{viewModel.passcode}" />
@@ -121,7 +121,8 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:gravity="left"
                         android:layout_marginTop="10dp"
                         android:textColor="@color/colorYellowPrimaryDark"
@@ -140,7 +141,8 @@
                         android:text="@string/pay"
                         android:visibility="@{!viewModel.isPaid?View.VISIBLE:View.GONE}"
                         android:textAllCaps="false"
-                        android:textSize="16sp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:textColor="@color/colorYellowPrimaryDark"
                         style="@style/Widget.MaterialComponents.Button.TextButton"
                         />
