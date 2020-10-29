@@ -131,27 +131,24 @@
                     android:orientation="horizontal">
                     <ImageButton
                         android:id="@+id/deleteBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginLeft="5dp"
-
-                        android:background="@drawable/md_transparent"
-                        android:src="@drawable/icons_delete" />
+                        android:background="@drawable/icons_delete"
+                         />
                     <ImageButton
                         android:id="@+id/messageBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
-                        android:background="@drawable/md_transparent"
-                        android:src="@drawable/icons_edit_chat" />
+                        android:background="@drawable/icons_edit_chat" />
                     <ImageButton
                         android:id="@+id/messageNoBtn"
-                        android:layout_width="wrap_content"
-                        android:layout_height="25dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_marginLeft="5dp"
-                        android:background="@drawable/md_transparent"
-                        android:src="@drawable/icons_edit_chat_no" />
+                        android:background="@drawable/icons_edit_chat_no" />
                 </LinearLayout>
 
             </LinearLayout>

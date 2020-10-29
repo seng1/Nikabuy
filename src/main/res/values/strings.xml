@@ -203,4 +203,5 @@
     <string name="forget_payment_password_please_contact_to">If you forget your payment password, please contact to our customer service 098 333 753</string>
     <string name="no_purchase_order_to_pay">You don\'t have purchase order to pay</string>
     <string name="rate">Rate</string>
+    <string name="my_product_notes">My product notes:</string>
 </resources>

@@ -203,4 +203,5 @@
     <string name="forget_payment_password_please_contact_to">如果您忘记了付款密码，请联系我们的客户服务098333753</string>
     <string name="no_purchase_order_to_pay">您没有要支付的采购订单</string>
     <string name="rate">率</string>
+    <string name="my_product_notes">我的产品说明：</string>
 </resources>

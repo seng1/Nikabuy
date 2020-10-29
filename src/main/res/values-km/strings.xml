@@ -201,4 +201,5 @@
     <string name="forget_payment_password_please_contact_to">ប្រសិនបើអ្នកភ្លេចលេខកូដបង់ប្រាក់សូមទាក់ទងមកផ្នែកបំរើអតិថិជនរបស់យើង ០៩៨ ៣៣៣ ៧៥៣</string>
     <string name="no_purchase_order_to_pay">អ្នកមិនមានបញ្ជាទិញដើម្បីបង់ប្រាក់ទេ</string>
     <string name="rate">អត្រា</string>
+    <string name="my_product_notes">សំគាល់ផលិតផលរបស់ខ្ញុំៈ</string>
 </resources>
